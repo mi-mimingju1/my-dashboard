@@ -48,19 +48,18 @@
   .topic-item { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
   .topic-item:first-child { border-top: 0; }
   .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
-  .sched-form { display: flex; gap: 6px; margin-bottom: 12px; }
-  .sched-form input[type=time] { width: 96px; }
-  .sched-form input[type=text] { flex: 1; min-width: 0; }
+  .sched-form { display: grid; gap: 8px; margin-bottom: 12px; }
+  .sched-form .row { display: flex; gap: 8px; }
+  .sched-form .row > * { flex: 1; min-width: 0; }
+  .sched-form label.allday { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
   input, button.add {
     font-family: inherit; font-size: 14px; padding: 8px 10px; border-radius: 8px;
     border: 1px solid var(--line); background: var(--bg); color: var(--text);
   }
+  input[type=date], input[type=time] { color-scheme: light dark; }
   button.add { background: var(--accent); border-color: var(--accent); color: #fff; cursor: pointer; }
-  .sched-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 14px; }
-  .sched-item:first-child { border-top: 0; }
-  .sched-item .t { color: var(--accent); font-weight: 600; min-width: 48px; font-variant-numeric: tabular-nums; }
-  .sched-item .x { margin-left: auto; background: none; border: 0; color: var(--muted); cursor: pointer; font-size: 16px; }
-  .sched-item.done span.title { text-decoration: line-through; color: var(--muted); }
+  .cal-frame { width: 100%; height: 360px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+  .cal-help { font-size: 13px; color: var(--muted); background: var(--bg); border: 1px dashed var(--line); border-radius: 10px; padding: 12px; }
   .links a { display: block; padding: 6px 0; font-size: 14px; color: var(--accent); }
 </style>
 </head>
@@ -90,14 +89,18 @@
 
     <div>
       <section>
-        <h2>오늘 일정</h2>
+        <h2>일정 <span class="tag">구글 캘린더 연동</span></h2>
         <form class="sched-form" id="sched-form">
-          <input type="time" id="s-time" aria-label="시간">
-          <input type="text" id="s-title" placeholder="할 일 / 일정" aria-label="일정 내용" required>
-          <button class="add" type="submit">추가</button>
+          <input type="text" id="s-title" placeholder="일정 내용" aria-label="일정 내용" required>
+          <div class="row">
+            <input type="date" id="s-date" aria-label="날짜" required>
+            <input type="time" id="s-time" aria-label="시간">
+          </div>
+          <label class="allday"><input type="checkbox" id="s-allday"> 종일 일정 (시간 없음)</label>
+          <button class="add" type="submit">구글 캘린더에 추가</button>
         </form>
-        <div id="schedule"></div>
-        <div class="meta" style="margin-top:10px">이 브라우저에 저장됩니다.</div>
+        <div id="cal-box"></div>
+        <div class="meta" style="margin-top:10px">추가를 누르면 구글 캘린더 창이 열리고, 거기서 저장을 누르면 폰과 PC에 같이 반영됩니다.</div>
       </section>
 
       <section>
@@ -183,41 +186,62 @@ function renderTopics(topics) {
   $("tabs").querySelectorAll(".tab").forEach(b => b.onclick = () => { current = b.dataset.t; renderTopics(topics); });
 }
 
-/* ---------- 일정 (이 브라우저의 localStorage에 저장) ---------- */
-const KEY = "dash-schedule-v1";
-let schedule = [];
-try { schedule = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) {}
-const save = () => { try { localStorage.setItem(KEY, JSON.stringify(schedule)); } catch (e) {} };
+/* ---------- 일정: 구글 캘린더 연동 ---------- */
+// 구글 캘린더의 '캘린더 ID'를 따옴표 안에 붙여넣으세요. 비워 두면 안내 문구가 보입니다.
+const CALENDAR_ID = "";
 
-function renderSchedule() {
-  const sorted = [...schedule].sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
-  $("schedule").innerHTML = sorted.length
-    ? sorted.map(s => `
-      <div class="sched-item ${s.done ? "done" : ""}">
-        <input type="checkbox" data-id="${s.id}" ${s.done ? "checked" : ""} aria-label="완료">
-        <span class="t">${esc(s.time || "--:--")}</span>
-        <span class="title">${esc(s.title)}</span>
-        <button class="x" data-del="${s.id}" aria-label="삭제">×</button>
-      </div>`).join("")
-    : `<div class="empty">등록된 일정이 없습니다.</div>`;
-  $("schedule").querySelectorAll("input[type=checkbox]").forEach(c => c.onchange = () => {
-    const it = schedule.find(s => s.id == c.dataset.id); if (it) { it.done = c.checked; save(); renderSchedule(); }
-  });
-  $("schedule").querySelectorAll("[data-del]").forEach(b => b.onclick = () => {
-    schedule = schedule.filter(s => s.id != b.dataset.del); save(); renderSchedule();
-  });
+const pad = (n) => String(n).padStart(2, "0");
+const ymd = (d) => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`;
+const ymdhms = (d) => `${ymd(d)}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+
+// 날짜/시간을 고르면 '미리 채워진 구글 캘린더 일정 만들기 창' 주소를 만들어 줍니다.
+function calendarLink(title, dateStr, timeStr, allDay) {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  let dates;
+  if (allDay || !timeStr) {
+    dates = `${ymd(new Date(y, m - 1, d))}/${ymd(new Date(y, m - 1, d + 1))}`;
+  } else {
+    const [hh, mm] = timeStr.split(":").map(Number);
+    dates = `${ymdhms(new Date(y, m - 1, d, hh, mm))}/${ymdhms(new Date(y, m - 1, d, hh + 1, mm))}`;
+  }
+  const p = new URLSearchParams({ action: "TEMPLATE", text: title, dates, ctz: "Asia/Seoul" });
+  return "https://calendar.google.com/calendar/render?" + p.toString();
 }
+
+// 날짜 칸의 기본값은 오늘
+const now = new Date();
+$("s-date").value = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+
+// 종일 일정이면 시간 칸을 끕니다
+$("s-allday").onchange = (e) => {
+  $("s-time").disabled = e.target.checked;
+  if (e.target.checked) $("s-time").value = "";
+};
+
 $("sched-form").onsubmit = (e) => {
   e.preventDefault();
   const title = $("s-title").value.trim();
-  if (!title) return;
-  schedule.push({ id: Date.now(), time: $("s-time").value, title, done: false });
-  $("s-title").value = ""; $("s-time").value = "";
-  save(); renderSchedule();
+  const date = $("s-date").value;
+  if (!title || !date) return;
+  const url = calendarLink(title, date, $("s-time").value, $("s-allday").checked);
+  window.open(url, "_blank", "noopener");
+  $("s-title").value = "";
 };
 
+// 구글 캘린더에 등록된 일정을 목록으로 보여주는 창
+function renderCalendar() {
+  if (!CALENDAR_ID) {
+    $("cal-box").innerHTML = `<div class="cal-help"><b>일정 목록을 여기에 표시하려면 한 가지 설정이 필요해요.</b><br>
+      구글 캘린더 → 설정 → 내 캘린더의 설정 → '캘린더 통합'에서 <b>캘린더 ID</b>를 복사해 index.html의 <code>CALENDAR_ID</code> 따옴표 안에 붙여넣으세요.</div>`;
+    return;
+  }
+  const src = "https://calendar.google.com/calendar/embed?src=" + encodeURIComponent(CALENDAR_ID) +
+    "&ctz=Asia%2FSeoul&mode=AGENDA&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0";
+  $("cal-box").innerHTML = `<iframe class="cal-frame" src="${src}" title="구글 캘린더 일정"></iframe>`;
+}
+
 /* ---------- 시작 ---------- */
-renderSchedule();
+renderCalendar();
 loadData().then(d => { renderBriefing(d.briefing); renderTopics(d.topics); });
 </script>
 </body>
