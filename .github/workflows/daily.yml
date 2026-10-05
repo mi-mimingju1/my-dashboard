@@ -1,0 +1,27 @@
+name: 매일 뉴스 업데이트
+
+on:
+  schedule:
+    - cron: "0 22 * * *"   # 한국 시간 매일 오전 7시 (UTC 22시)
+  workflow_dispatch:        # 수동으로 지금 바로 실행하는 버튼
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 뉴스 수집
+        run: python fetch_news.py
+      - name: 변경된 data.json 저장
+        run: |
+          git config user.name "daily-bot"
+          git config user.email "daily-bot@users.noreply.github.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "daily update"
+          git push
