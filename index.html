@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Daily Dashboard</title>
+<style>
+  :root {
+    --bg: #f6f5f1; --card: #ffffff; --text: #1d1d1b; --muted: #6b6a66;
+    --line: #e4e2db; --accent: #2f5d50; --accent-soft: #e3eee9; --warn: #b4572a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141513; --card: #1d1f1c; --text: #ecebe6; --muted: #9b9a94;
+      --line: #2b2d29; --accent: #7fb8a4; --accent-soft: #233029; --warn: #e0905f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  header h1 { font-size: 26px; margin: 0; letter-spacing: -0.02em; }
+  header .date { color: var(--muted); font-size: 15px; }
+  .status { font-size: 13px; color: var(--muted); }
+  .status.sample { color: var(--warn); }
+  .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin-bottom: 20px; }
+  section h2 { font-size: 17px; margin: 0 0 14px; display: flex; align-items: center; gap: 8px; }
+  section h2 .tag { font-size: 12px; font-weight: 500; color: var(--accent); background: var(--accent-soft); padding: 2px 8px; border-radius: 99px; }
+  .brief-item { padding: 12px 0; border-top: 1px solid var(--line); }
+  .brief-item:first-of-type { border-top: 0; padding-top: 0; }
+  .brief-item h3 { font-size: 15px; margin: 0 0 4px; }
+  .brief-item p { margin: 0 0 4px; color: var(--muted); font-size: 14px; }
+  .meta { font-size: 12px; color: var(--muted); }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .tab {
+    border: 1px solid var(--line); background: transparent; color: var(--text);
+    padding: 6px 12px; border-radius: 99px; font-size: 13px; cursor: pointer; font-family: inherit;
+  }
+  .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .topic-item { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .topic-item:first-child { border-top: 0; }
+  .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
+  .sched-form { display: flex; gap: 6px; margin-bottom: 12px; }
+  .sched-form input[type=time] { width: 96px; }
+  .sched-form input[type=text] { flex: 1; min-width: 0; }
+  input, button.add {
+    font-family: inherit; font-size: 14px; padding: 8px 10px; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--text);
+  }
+  button.add { background: var(--accent); border-color: var(--accent); color: #fff; cursor: pointer; }
+  .sched-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .sched-item:first-child { border-top: 0; }
+  .sched-item .t { color: var(--accent); font-weight: 600; min-width: 48px; font-variant-numeric: tabular-nums; }
+  .sched-item .x { margin-left: auto; background: none; border: 0; color: var(--muted); cursor: pointer; font-size: 16px; }
+  .sched-item.done span.title { text-decoration: line-through; color: var(--muted); }
+  .links a { display: block; padding: 6px 0; font-size: 14px; color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>My Daily Dashboard</h1>
+      <div class="date" id="today"></div>
+    </div>
+    <div class="status sample" id="status">샘플 데이터 표시 중</div>
+  </header>
+
+  <div class="grid">
+    <div>
+      <section>
+        <h2>오늘의 뉴스 정리 <span class="tag">AI 요약</span></h2>
+        <div id="briefing"></div>
+      </section>
+
+      <section>
+        <h2>관심 주제 모니터링</h2>
+        <div class="tabs" id="tabs" role="tablist"></div>
+        <div id="topic-list"></div>
+      </section>
+    </div>
+
+    <div>
+      <section>
+        <h2>오늘 일정</h2>
+        <form class="sched-form" id="sched-form">
+          <input type="time" id="s-time" aria-label="시간">
+          <input type="text" id="s-title" placeholder="할 일 / 일정" aria-label="일정 내용" required>
+          <button class="add" type="submit">추가</button>
+        </form>
+        <div id="schedule"></div>
+        <div class="meta" style="margin-top:10px">이 브라우저에 저장됩니다.</div>
+      </section>
+
+      <section>
+        <h2>바로가기</h2>
+        <div class="links">
+          <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">청약Home →</a>
+          <a href="https://calendar.google.com" target="_blank" rel="noopener">구글 캘린더 →</a>
+          <a href="https://www.molit.go.kr" target="_blank" rel="noopener">국토교통부 →</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- 샘플 데이터 (3단계 자동화가 data.json을 만들면 이 내용은 자동으로 대체됨) ---------- */
+const SAMPLE = {
+  updated: null,
+  briefing: [
+    { title: "[샘플] 오늘의 핵심 뉴스 제목이 여기에 들어갑니다", summary: "AI가 여러 기사를 읽고 2~3문장으로 요약한 내용이 표시되는 자리입니다.", source: "출처 언론사", url: "#" },
+    { title: "[샘플] 두 번째 뉴스", summary: "자동화가 연결되면 매일 아침 이 목록이 새로 채워집니다.", source: "출처 언론사", url: "#" },
+    { title: "[샘플] 세 번째 뉴스", summary: "관심 주제와 관련된 기사가 우선적으로 선별되도록 만들 수 있습니다.", source: "출처 언론사", url: "#" }
+  ],
+  topics: {
+    "부동산 정책": [{ title: "[샘플] 부동산 정책 관련 기사 제목", source: "출처", date: "", url: "#" }],
+    "반도체":     [{ title: "[샘플] 반도체 관련 기사 제목", source: "출처", date: "", url: "#" }],
+    "AI":         [{ title: "[샘플] AI 관련 기사 제목", source: "출처", date: "", url: "#" }],
+    "양자컴퓨터": [{ title: "[샘플] 양자컴퓨터 관련 기사 제목", source: "출처", date: "", url: "#" }],
+    "청약":       [{ title: "[샘플] 청약 일정·공고 관련 기사 제목", source: "출처", date: "", url: "#" }]
+  }
+};
+
+const TOPICS = ["부동산 정책", "반도체", "AI", "양자컴퓨터", "청약"];
+
+/* ---------- 유틸 ---------- */
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const safeUrl = (u) => /^https?:\/\//.test(u) ? u : "#";
+
+/* ---------- 날짜 ---------- */
+$("today").textContent = new Date().toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric", weekday: "long" });
+
+/* ---------- 데이터 불러오기: data.json이 있으면 그걸 쓰고, 없으면 샘플 ---------- */
+async function loadData() {
+  try {
+    const res = await fetch("data.json?_=" + Date.now(), { cache: "no-store" });
+    if (!res.ok) throw new Error("no data.json");
+    const data = await res.json();
+    const st = $("status");
+    st.textContent = data.updated ? "마지막 업데이트: " + data.updated : "";
+    st.classList.remove("sample");
+    return data;
+  } catch (e) {
+    return SAMPLE;
+  }
+}
+
+/* ---------- 뉴스 브리핑 ---------- */
+function renderBriefing(items) {
+  $("briefing").innerHTML = (items && items.length)
+    ? items.map(n => `
+      <div class="brief-item">
+        <h3><a href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener">${esc(n.title)}</a></h3>
+        <p>${esc(n.summary)}</p>
+        <div class="meta">${esc(n.source)}</div>
+      </div>`).join("")
+    : `<div class="empty">오늘 정리된 뉴스가 없습니다.</div>`;
+}
+
+/* ---------- 관심 주제 ---------- */
+let current = TOPICS[0];
+function renderTopics(topics) {
+  $("tabs").innerHTML = TOPICS.map(t =>
+    `<button class="tab" role="tab" aria-selected="${t === current}" data-t="${esc(t)}">${esc(t)}</button>`).join("");
+  const list = (topics && topics[current]) || [];
+  $("topic-list").innerHTML = list.length
+    ? list.map(a => `
+      <div class="topic-item">
+        <a href="${esc(safeUrl(a.url))}" target="_blank" rel="noopener">${esc(a.title)}</a>
+        <div class="meta">${esc(a.source)}${a.date ? " · " + esc(a.date) : ""}</div>
+      </div>`).join("")
+    : `<div class="empty">새 소식이 없습니다.</div>`;
+  $("tabs").querySelectorAll(".tab").forEach(b => b.onclick = () => { current = b.dataset.t; renderTopics(topics); });
+}
+
+/* ---------- 일정 (이 브라우저의 localStorage에 저장) ---------- */
+const KEY = "dash-schedule-v1";
+let schedule = [];
+try { schedule = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(schedule)); } catch (e) {} };
+
+function renderSchedule() {
+  const sorted = [...schedule].sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
+  $("schedule").innerHTML = sorted.length
+    ? sorted.map(s => `
+      <div class="sched-item ${s.done ? "done" : ""}">
+        <input type="checkbox" data-id="${s.id}" ${s.done ? "checked" : ""} aria-label="완료">
+        <span class="t">${esc(s.time || "--:--")}</span>
+        <span class="title">${esc(s.title)}</span>
+        <button class="x" data-del="${s.id}" aria-label="삭제">×</button>
+      </div>`).join("")
+    : `<div class="empty">등록된 일정이 없습니다.</div>`;
+  $("schedule").querySelectorAll("input[type=checkbox]").forEach(c => c.onchange = () => {
+    const it = schedule.find(s => s.id == c.dataset.id); if (it) { it.done = c.checked; save(); renderSchedule(); }
+  });
+  $("schedule").querySelectorAll("[data-del]").forEach(b => b.onclick = () => {
+    schedule = schedule.filter(s => s.id != b.dataset.del); save(); renderSchedule();
+  });
+}
+$("sched-form").onsubmit = (e) => {
+  e.preventDefault();
+  const title = $("s-title").value.trim();
+  if (!title) return;
+  schedule.push({ id: Date.now(), time: $("s-time").value, title, done: false });
+  $("s-title").value = ""; $("s-time").value = "";
+  save(); renderSchedule();
+};
+
+/* ---------- 시작 ---------- */
+renderSchedule();
+loadData().then(d => { renderBriefing(d.briefing); renderTopics(d.topics); });
+</script>
+</body>
+</html>
