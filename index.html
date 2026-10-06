@@ -44,7 +44,7 @@
     border: 1px solid var(--line); background: transparent; color: var(--text);
     padding: 6px 12px; border-radius: 99px; font-size: 13px; cursor: pointer; font-family: inherit;
   }
-  .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent, #fff); }
   .topic-item { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
   .topic-item:first-child { border-top: 0; }
   .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
@@ -57,10 +57,11 @@
     border: 1px solid var(--line); background: var(--bg); color: var(--text);
   }
   input[type=date], input[type=time] { color-scheme: light dark; }
-  button.add { background: var(--accent); border-color: var(--accent); color: #fff; cursor: pointer; }
+  button.add { background: var(--accent); border-color: var(--accent); color: var(--on-accent, #fff); cursor: pointer; }
   .cal-frame { width: 100%; height: 360px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
   .cal-help { font-size: 13px; color: var(--muted); background: var(--bg); border: 1px dashed var(--line); border-radius: 10px; padding: 12px; }
-  .links a { display: block; padding: 6px 0; font-size: 14px; color: var(--accent); }
+  .links .link-row { display: flex; align-items: center; }
+  .links a { display: block; flex: 1; padding: 6px 0; font-size: 14px; color: var(--accent); }
 
   /* ---------- 꾸미기(테마) ---------- */
   .wrap { position: relative; z-index: 1; }
@@ -72,21 +73,20 @@
     backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   }
   .has-bg header { border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; }
-  .head-right { display: flex; align-items: center; gap: 10px; }
+  .head-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   button.paint {
     border: 1px solid var(--line); background: var(--card); color: var(--text);
-    border-radius: 99px; padding: 6px 12px; font-size: 13px; cursor: pointer; font-family: inherit;
+    border-radius: 99px; padding: 6px 12px; font-size: 13px; cursor: pointer; font-family: inherit; white-space: nowrap;
   }
-  #theme-panel {
+  #theme-panel, #gh-panel {
     position: fixed; top: 0; right: 0; bottom: 0; width: min(340px, 100%); z-index: 20;
     background: var(--card); color: var(--text); border-left: 1px solid var(--line);
     padding: 20px; overflow-y: auto; transform: translateX(100%); transition: transform .2s;
-    box-shadow: -8px 0 30px rgba(0,0,0,.15);
   }
-  #theme-panel.open { transform: none; }
-  #theme-panel h3 { margin: 0 0 4px; font-size: 16px; display: flex; justify-content: space-between; align-items: center; }
-  #theme-panel h4 { margin: 20px 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
-  #theme-panel .close { background: none; border: 0; font-size: 22px; color: var(--muted); cursor: pointer; }
+  #theme-panel.open, #gh-panel.open { box-shadow: -8px 0 30px rgba(0,0,0,.15); transform: none; }
+  #theme-panel h3, #gh-panel h3 { margin: 0 0 4px; font-size: 16px; display: flex; justify-content: space-between; align-items: center; }
+  #theme-panel h4, #gh-panel h4 { margin: 20px 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
+  #theme-panel .close, #gh-panel .close { background: none; border: 0; font-size: 22px; color: var(--muted); cursor: pointer; }
   .swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .swatch {
     border: 2px solid var(--line); border-radius: 10px; padding: 8px 6px; cursor: pointer;
@@ -109,6 +109,41 @@
   .slot-thumb { height: 64px; border-radius: 8px; background: var(--bg) center/cover no-repeat; border: 1px dashed var(--line);
     display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
   .slot .panel-row { margin-top: 8px; }
+  .colorrows { display: grid; gap: 8px; }
+  .colorrows .lbl { width: 64px; }
+
+  /* ---------- 편집 모드 ---------- */
+  body:not(.editing) .edit-only { display: none !important; }
+  .col { min-width: 0; }
+  .title-input { font-family: inherit; font-size: 24px; font-weight: 700; width: 100%; max-width: 420px; padding: 4px 8px; }
+  body.editing #site-title { display: none; }
+  #edit-bar { background: var(--accent-soft, var(--card)); border: 1px dashed var(--accent); border-radius: 12px; padding: 12px 14px; margin-bottom: 20px; font-size: 13px; }
+  #edit-bar .edit-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+  #gh-state { font-size: 13px; }
+  #gh-state.ok { color: var(--accent); font-weight: 600; }
+  #gh-state.off { color: var(--warn); }
+  .sync { margin-top: 6px; font-size: 12px; color: var(--muted); min-height: 16px; }
+  .sync.warn { color: var(--warn); }
+  body.editing section { outline: 2px dashed var(--accent); outline-offset: 2px; }
+  body.editing .col { min-height: 90px; }
+  .handle { cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; color: var(--accent);
+    font-size: 18px; line-height: 1; padding: 5px 7px; border-radius: 6px; background: var(--accent-soft); }
+  .handle:active { cursor: grabbing; }
+  .drop-ph { border: 2px dashed var(--accent); border-radius: 14px; margin-bottom: 20px; background: var(--accent-soft); }
+  section.dragging { cursor: grabbing; }
+  .tabwrap { display: inline-flex; align-items: center; }
+  .tab-x { border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 15px; padding: 0 5px; font-family: inherit; }
+  .tab-x:hover { color: var(--warn); }
+  .xbtn { border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 18px; padding: 0 8px; font-family: inherit; }
+  .xbtn:hover { color: var(--warn); }
+  .add-form { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .add-form input { flex: 1; min-width: 110px; }
+  #gh-panel ol { padding-left: 18px; margin: 8px 0; font-size: 13px; line-height: 1.7; }
+  #gh-panel details { font-size: 13px; margin: 10px 0; }
+  #gh-panel summary { cursor: pointer; color: var(--accent); }
+  #gh-panel input[type=password], #gh-panel input[type=text] { width: 100%; margin-bottom: 6px; }
+  #gh-result.ok { color: var(--accent); }
+  #gh-result.bad { color: var(--warn); }
 </style>
 </head>
 <body>
@@ -119,11 +154,13 @@
   <h4>색상 테마</h4>
   <div class="swatches" id="swatches"></div>
 
-  <h4>포인트 색</h4>
-  <div class="panel-row">
-    <input type="color" id="accent-pick" aria-label="포인트 색">
-    <button class="btn-sm" id="accent-reset" type="button">테마 색으로</button>
+  <h4>내 색 직접 고르기</h4>
+  <div class="colorrows">
+    <div class="panel-row"><span class="lbl">배경 색</span><input type="color" id="pick-bg" aria-label="배경 색"><button class="btn-sm" type="button" data-reset="bgColor">되돌리기</button></div>
+    <div class="panel-row"><span class="lbl">카드 색</span><input type="color" id="pick-card" aria-label="카드 색"><button class="btn-sm" type="button" data-reset="cardColor">되돌리기</button></div>
+    <div class="panel-row"><span class="lbl">포인트 색</span><input type="color" id="pick-accent" aria-label="포인트 색"><button class="btn-sm" type="button" data-reset="accent">되돌리기</button></div>
   </div>
+  <div class="panel-note">배경 색을 바꾸면 카드와 글자색이 읽기 좋게 자동으로 맞춰져요. 카드 색은 따로 바꿀 수도 있어요.</div>
 
   <h4>배경 사진</h4>
   <div class="panel-note" id="device-now" style="margin:0 0 10px"></div>
@@ -132,35 +169,79 @@
   <h4>초기화</h4>
   <button class="btn-sm" id="theme-reset" type="button">모두 기본값으로</button>
 </aside>
+<aside id="gh-panel" aria-label="GitHub 연결">
+  <h3>🔗 GitHub 연결 <button class="close" id="gh-close" type="button" aria-label="닫기">×</button></h3>
+  <div class="panel-note">제목·관심 주제·바로가기를 바꾸면 GitHub의 <b>config.json</b> 파일에 저장되고, 뉴스 수집 프로그램이 그 파일을 읽어요. 이 저장을 하려면 <b>토큰</b>(임시 열쇠)이 한 번 필요해요.</div>
+  <details>
+    <summary>토큰 만드는 방법 (처음 한 번만)</summary>
+    <ol>
+      <li>github.com에 로그인한 뒤 오른쪽 위 프로필 사진 → <b>Settings</b></li>
+      <li>왼쪽 맨 아래 <b>Developer settings</b> → <b>Personal access tokens</b> → <b>Fine-grained tokens</b> → <b>Generate new token</b></li>
+      <li>Token name은 아무거나(예: dashboard), Expiration은 원하는 기간</li>
+      <li><b>Repository access</b>에서 <b>Only select repositories</b>를 고르고 <b>my-dashboard</b> 선택</li>
+      <li><b>Permissions</b> → <b>Repository permissions</b> → <b>Contents</b>를 <b>Read and write</b>로</li>
+      <li>맨 아래 <b>Generate token</b> → 나온 <b>github_pat_…</b> 글자를 복사해 아래에 붙여넣기 (한 번만 보여요)</li>
+    </ol>
+  </details>
+  <h4>토큰</h4>
+  <input type="password" id="gh-token" autocomplete="off" placeholder="github_pat_...">
+  <h4>저장소</h4>
+  <input type="text" id="gh-owner" placeholder="GitHub 아이디" autocomplete="off">
+  <input type="text" id="gh-repo" placeholder="저장소 이름 (my-dashboard)" autocomplete="off">
+  <div class="panel-row" style="margin-top:10px">
+    <button class="btn-sm" id="gh-connect" type="button">연결 테스트 및 저장</button>
+    <button class="btn-sm" id="gh-disconnect" type="button">연결 해제</button>
+  </div>
+  <div class="panel-note" id="gh-result"></div>
+  <div class="panel-note">토큰은 이 기기의 브라우저에만 저장되고, 사이트 파일이나 GitHub에는 올라가지 않아요. 다른 사람이 쓰는 컴퓨터에서는 연결하지 마세요. 폰과 PC에서 각각 한 번씩 연결하면 됩니다.</div>
+</aside>
 <div class="wrap">
   <header>
     <div>
-      <h1>My Daily Dashboard</h1>
+      <h1 id="site-title">My Daily Dashboard</h1>
+      <input id="title-input" class="title-input edit-only" maxlength="40" aria-label="사이트 제목">
       <div class="date" id="today"></div>
     </div>
     <div class="head-right">
       <div class="status sample" id="status">샘플 데이터 표시 중</div>
+      <button class="paint" id="edit-btn" type="button">✏️ 편집</button>
       <button class="paint" id="paint-btn" type="button">🎨 꾸미기</button>
     </div>
   </header>
 
+  <div id="edit-bar" class="edit-only">
+    <div><b>편집 모드</b> · 칸 제목 왼쪽의 <b>⠿</b>를 끌어서 위치를 바꾸고, 위쪽 제목도 바로 고칠 수 있어요.</div>
+    <div class="edit-row">
+      <span id="gh-state"></span>
+      <button class="btn-sm" id="gh-open" type="button">GitHub 연결 설정</button>
+      <button class="btn-sm" id="layout-reset" type="button">칸 위치 초기화</button>
+    </div>
+    <div id="sync-msg" class="sync"></div>
+  </div>
+
   <div class="grid">
-    <div>
-      <section>
-        <h2>오늘의 뉴스 정리 <span class="tag">AI 요약</span></h2>
+    <div class="col" id="col-a">
+      <section data-id="briefing">
+        <h2><span class="handle edit-only" title="끌어서 이동">⠿</span>오늘의 뉴스 정리 <span class="tag">AI 요약</span></h2>
         <div id="briefing"></div>
       </section>
 
-      <section>
-        <h2>관심 주제 모니터링</h2>
+      <section data-id="topics">
+        <h2><span class="handle edit-only" title="끌어서 이동">⠿</span>관심 주제 모니터링</h2>
         <div class="tabs" id="tabs" role="tablist"></div>
         <div id="topic-list"></div>
+        <form class="add-form edit-only" id="topic-form">
+          <input id="t-name" placeholder="주제 이름 (예: 전기차)" maxlength="30" required>
+          <input id="t-query" placeholder="검색어 (비우면 이름과 같음)" maxlength="60">
+          <button class="add" type="submit">주제 추가</button>
+        </form>
+        <div class="panel-note edit-only">검색어는 구글 뉴스에서 찾을 말이에요. 예) 이름 "AI", 검색어 "인공지능 AI". 주제를 추가·삭제하면 뉴스 수집 프로그램도 자동으로 바뀌어요.</div>
       </section>
     </div>
 
-    <div>
-      <section>
-        <h2>일정 <span class="tag">구글 캘린더 연동</span></h2>
+    <div class="col" id="col-b">
+      <section data-id="schedule">
+        <h2><span class="handle edit-only" title="끌어서 이동">⠿</span>일정 <span class="tag">구글 캘린더 연동</span></h2>
         <form class="sched-form" id="sched-form">
           <input type="text" id="s-title" placeholder="일정 내용" aria-label="일정 내용" required>
           <div class="row">
@@ -174,13 +255,14 @@
         <div class="meta" style="margin-top:10px">추가를 누르면 구글 캘린더 창이 열리고, 거기서 저장을 누르면 폰과 PC에 같이 반영됩니다.</div>
       </section>
 
-      <section>
-        <h2>바로가기</h2>
-        <div class="links">
-          <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">청약Home →</a>
-          <a href="https://calendar.google.com" target="_blank" rel="noopener">구글 캘린더 →</a>
-          <a href="https://www.molit.go.kr" target="_blank" rel="noopener">국토교통부 →</a>
-        </div>
+      <section data-id="links">
+        <h2><span class="handle edit-only" title="끌어서 이동">⠿</span>바로가기</h2>
+        <div class="links" id="links"></div>
+        <form class="add-form edit-only" id="link-form">
+          <input id="l-name" placeholder="이름 (예: 네이버)" maxlength="24" required>
+          <input id="l-url" placeholder="주소 (예: naver.com)" required>
+          <button class="add" type="submit">추가</button>
+        </form>
       </section>
     </div>
   </div>
@@ -204,7 +286,6 @@ const SAMPLE = {
   }
 };
 
-const TOPICS = ["부동산 정책", "반도체", "AI", "양자컴퓨터", "청약"];
 
 /* ---------- 유틸 ---------- */
 const $ = (id) => document.getElementById(id);
@@ -215,18 +296,15 @@ const safeUrl = (u) => /^https?:\/\//.test(u) ? u : "#";
 $("today").textContent = new Date().toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric", weekday: "long" });
 
 /* ---------- 데이터 불러오기: data.json이 있으면 그걸 쓰고, 없으면 샘플 ---------- */
+let dataCache = SAMPLE;
+function setStatus(d, sample) {
+  const st = $("status");
+  if (sample) { st.textContent = "샘플 데이터 표시 중"; st.classList.add("sample"); }
+  else { st.textContent = d.updated ? "마지막 업데이트: " + d.updated : ""; st.classList.remove("sample"); }
+}
 async function loadData() {
-  try {
-    const res = await fetch("data.json?_=" + Date.now(), { cache: "no-store" });
-    if (!res.ok) throw new Error("no data.json");
-    const data = await res.json();
-    const st = $("status");
-    st.textContent = data.updated ? "마지막 업데이트: " + data.updated : "";
-    st.classList.remove("sample");
-    return data;
-  } catch (e) {
-    return SAMPLE;
-  }
+  try { const d = await readJson("data.json"); setStatus(d); return d; }
+  catch (e) { setStatus(SAMPLE, true); return SAMPLE; }
 }
 
 /* ---------- 뉴스 브리핑 ---------- */
@@ -242,20 +320,30 @@ function renderBriefing(items) {
 }
 
 /* ---------- 관심 주제 ---------- */
-let current = TOPICS[0];
-function renderTopics(topics) {
-  $("tabs").innerHTML = TOPICS.map(t =>
-    `<button class="tab" role="tab" aria-selected="${t === current}" data-t="${esc(t)}">${esc(t)}</button>`).join("");
-  const list = (topics && topics[current]) || [];
-  $("topic-list").innerHTML = list.length
-    ? list.map(a => `
+let current = null;
+function renderTopics() {
+  const topics = cfg.topics;
+  if (!topics.some(t => t.name === current)) current = topics[0] ? topics[0].name : null;
+  $("tabs").innerHTML = topics.map(t =>
+    `<span class="tabwrap"><button class="tab" role="tab" aria-selected="${t.name === current}" data-t="${esc(t.name)}">${esc(t.name)}</button>` +
+    `<button class="tab-x edit-only" data-del="${esc(t.name)}" aria-label="${esc(t.name)} 삭제" type="button">×</button></span>`).join("");
+  const list = dataCache && dataCache.topics ? dataCache.topics[current] : undefined;
+  $("topic-list").innerHTML = list === undefined
+    ? `<div class="empty">아직 수집 전이에요. 저장 후 1~2분쯤 뒤에 자동으로 채워져요.</div>`
+    : list.length
+      ? list.map(a => `
       <div class="topic-item">
         <a href="${esc(safeUrl(a.url))}" target="_blank" rel="noopener">${esc(a.title)}</a>
         <div class="meta">${esc(a.source)}${a.date ? " · " + esc(a.date) : ""}</div>
       </div>`).join("")
-    : `<div class="empty">새 소식이 없습니다.</div>`;
-  $("tabs").querySelectorAll(".tab").forEach(b => b.onclick = () => { current = b.dataset.t; renderTopics(topics); });
+      : `<div class="empty">새 소식이 없습니다.</div>`;
 }
+$("tabs").addEventListener("click", (e) => {
+  const del = e.target.closest(".tab-x");
+  if (del) { removeTopic(del.dataset.del); return; }
+  const tab = e.target.closest(".tab");
+  if (tab) { current = tab.dataset.t; renderTopics(); }
+});
 
 /* ---------- 일정: 구글 캘린더 연동 ---------- */
 // 구글 캘린더의 '캘린더 ID'를 따옴표 안에 붙여넣으세요. 비워 두면 안내 문구가 보입니다.
@@ -329,7 +417,7 @@ const bgKey = (id) => `dash-bg-${id}-v1`;
 const phoneMQ = window.matchMedia("(max-width: 800px)");
 const activeSlot = () => phoneMQ.matches ? "phone" : "pc";
 
-let theme = { preset: "auto", accent: null, dark: { pc: 25, phone: 25 } };
+let theme = { preset: "auto", accent: null, bgColor: null, cardColor: null, dark: { pc: 25, phone: 25 } };
 try {
   const saved = JSON.parse(localStorage.getItem(T_KEY) || "{}");
   Object.assign(theme, saved);
@@ -345,14 +433,43 @@ try {
   if (old) localStorage.removeItem("dash-bg-v1");
 } catch (e) {}
 
+/* 색 계산 도우미 */
+const toRgb = (h) => { h = h.replace("#", ""); if (h.length === 3) h = h.split("").map(c => c + c).join(""); return [0,2,4].map(i => parseInt(h.substr(i, 2), 16)); };
+const toHex = (a) => "#" + a.map(v => Math.round(Math.max(0, Math.min(255, v))).toString(16).padStart(2, "0")).join("");
+const mix = (c1, c2, t) => { const a = toRgb(c1), b = toRgb(c2); return toHex(a.map((v, i) => v * (1 - t) + b[i] * t)); }; // t=0이면 c1, t=1이면 c2
+const lum = (h) => { const [r, g, b] = toRgb(h).map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+const LIGHT_BASE = { "--bg":"#f6f5f1","--card":"#ffffff","--text":"#1d1d1b","--muted":"#6b6a66","--line":"#e4e2db","--accent":"#2f5d50" };
+const DARK_BASE  = { "--bg":"#141513","--card":"#1d1f1c","--text":"#ecebe6","--muted":"#9b9a94","--line":"#2b2d29","--accent":"#7fb8a4" };
+const ALL_VARS = ["--bg","--card","--text","--muted","--line","--accent","--accent-soft","--on-accent"];
+
 function applyTheme() {
   const root = document.documentElement.style;
-  ["--bg","--card","--text","--muted","--line","--accent","--accent-soft"].forEach(v => root.removeProperty(v));
+  ALL_VARS.forEach(v => root.removeProperty(v));
   const p = PRESETS.find(x => x.id === theme.preset) || PRESETS[0];
-  if (p.vars) Object.entries(p.vars).forEach(([k, v]) => root.setProperty(k, v));
-  if (theme.accent) root.setProperty("--accent", theme.accent);
-  if (p.vars || theme.accent) root.setProperty("--accent-soft", "color-mix(in srgb, var(--accent) 15%, var(--card))");
-  $("accent-pick").value = theme.accent || (getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#2f5d50");
+  const base = p.vars || (matchMedia("(prefers-color-scheme: dark)").matches ? DARK_BASE : LIGHT_BASE);
+  const custom = theme.bgColor || theme.cardColor || theme.accent;
+  let out = { ...base };
+
+  if (p.vars || custom) {
+    if (theme.bgColor) {
+      out["--bg"] = theme.bgColor;
+      if (!theme.cardColor) out["--card"] = lum(theme.bgColor) > 0.5 ? mix(theme.bgColor, "#ffffff", 0.6) : mix(theme.bgColor, "#ffffff", 0.07);
+    }
+    if (theme.cardColor) out["--card"] = theme.cardColor;
+    if (theme.bgColor || theme.cardColor) {
+      const light = lum(out["--card"]) > 0.4;
+      out["--text"]  = light ? "#1d1d1b" : "#ecebe6";
+      out["--muted"] = mix(out["--text"], out["--card"], 0.45);
+      out["--line"]  = mix(out["--text"], out["--card"], 0.86);
+    }
+    if (theme.accent) out["--accent"] = theme.accent;
+    out["--accent-soft"] = mix(out["--card"], out["--accent"], 0.15);
+    out["--on-accent"] = lum(out["--accent"]) > 0.55 ? "#1d1d1b" : "#ffffff";
+    Object.entries(out).forEach(([k, v]) => root.setProperty(k, v));
+  }
+  $("pick-bg").value = out["--bg"];
+  $("pick-card").value = out["--card"];
+  $("pick-accent").value = out["--accent"];
   document.querySelectorAll(".swatch").forEach(b => b.setAttribute("aria-pressed", b.dataset.id === theme.preset));
 }
 
@@ -420,11 +537,13 @@ function renderSlots() {
 
 $("swatches").innerHTML = PRESETS.map(p =>
   `<button type="button" class="swatch" data-id="${p.id}" aria-pressed="false"><i style="background:${p.prev}"></i>${p.name}</button>`).join("");
-$("swatches").querySelectorAll(".swatch").forEach(b => b.onclick = () => { theme.preset = b.dataset.id; theme.accent = null; saveTheme(); applyTheme(); });
-$("accent-pick").oninput = (e) => { theme.accent = e.target.value; saveTheme(); applyTheme(); };
-$("accent-reset").onclick = () => { theme.accent = null; saveTheme(); applyTheme(); };
+$("swatches").querySelectorAll(".swatch").forEach(b => b.onclick = () => { theme.preset = b.dataset.id; theme.accent = null; theme.bgColor = null; theme.cardColor = null; saveTheme(); applyTheme(); });
+[["pick-bg", "bgColor"], ["pick-card", "cardColor"], ["pick-accent", "accent"]].forEach(([id, key]) => {
+  $(id).oninput = (e) => { theme[key] = e.target.value; saveTheme(); applyTheme(); };
+});
+document.querySelectorAll("[data-reset]").forEach(b => b.onclick = () => { theme[b.dataset.reset] = null; saveTheme(); applyTheme(); });
 $("theme-reset").onclick = () => {
-  theme = { preset: "auto", accent: null, dark: { pc: 25, phone: 25 } };
+  theme = { preset: "auto", accent: null, bgColor: null, cardColor: null, dark: { pc: 25, phone: 25 } };
   try { localStorage.removeItem(T_KEY); SLOTS.forEach(sl => localStorage.removeItem(bgKey(sl.id))); } catch (e) {}
   applyTheme(); applyBg();
 };
@@ -435,9 +554,324 @@ phoneMQ.addEventListener("change", applyBg);   // 창 크기를 바꾸거나 폰
 
 applyTheme(); applyBg();
 
+/* ======================================================================
+   설정(config.json): 제목 · 관심 주제 · 바로가기
+   ====================================================================== */
+const DEFAULT_CFG = {
+  title: "My Daily Dashboard",
+  topics: [
+    { name: "부동산 정책", query: "부동산 정책" }, { name: "반도체", query: "반도체" },
+    { name: "AI", query: "인공지능 AI" }, { name: "양자컴퓨터", query: "양자컴퓨터" }, { name: "청약", query: "청약" }
+  ],
+  shortcuts: [
+    { name: "청약Home", url: "https://www.applyhome.co.kr" },
+    { name: "구글 캘린더", url: "https://calendar.google.com" },
+    { name: "국토교통부", url: "https://www.molit.go.kr" }
+  ]
+};
+const MAX_TOPICS = 12, MAX_LINKS = 20;
+const GH_KEY = "dash-gh-v1", CFG_LOCAL = "dash-config-local-v1", LAYOUT_KEY = "dash-layout-v1";
+let POLL_MS = 15000;
+let cfg = JSON.parse(JSON.stringify(DEFAULT_CFG));
+
+function normUrl(u) {
+  let x = String(u || "").trim();
+  if (!x || /\s/.test(x)) return "";
+  if (!/^[a-z][a-z0-9+.-]*:/i.test(x)) x = "https://" + x;
+  try { const p = new URL(x); return (p.protocol === "https:" || p.protocol === "http:") ? p.href : ""; } catch (e) { return ""; }
+}
+function cleanCfg(c) {
+  const out = { title: "", topics: [], shortcuts: [] };
+  out.title = String((c && c.title) || "").trim().slice(0, 40) || DEFAULT_CFG.title;
+  const topics = Array.isArray(c && c.topics) ? c.topics : DEFAULT_CFG.topics;
+  const seen = new Set();
+  topics.forEach(t => {
+    const name = String((t && t.name) || "").trim().slice(0, 30);
+    if (!name || seen.has(name)) return;
+    seen.add(name);
+    out.topics.push({ name, query: String((t && t.query) || "").trim().slice(0, 60) || name });
+  });
+  out.topics = out.topics.slice(0, MAX_TOPICS);
+  if (!out.topics.length) out.topics = JSON.parse(JSON.stringify(DEFAULT_CFG.topics));
+  const links = Array.isArray(c && c.shortcuts) ? c.shortcuts : DEFAULT_CFG.shortcuts;
+  links.forEach(l => {
+    const name = String((l && l.name) || "").trim().slice(0, 24), url = normUrl(l && l.url);
+    if (name && url) out.shortcuts.push({ name, url });
+  });
+  out.shortcuts = out.shortcuts.slice(0, MAX_LINKS);
+  return out;
+}
+
+/* ---------- GitHub 연결 ---------- */
+function ghGuess() {
+  const h = location.hostname;
+  if (h.endsWith(".github.io")) return { owner: h.replace(".github.io", ""), repo: location.pathname.split("/")[1] || h };
+  return { owner: "", repo: "" };
+}
+let gh = Object.assign({ token: "", branch: "main" }, ghGuess());
+try { Object.assign(gh, JSON.parse(localStorage.getItem(GH_KEY) || "{}")); } catch (e) {}
+const saveGh = () => { try { localStorage.setItem(GH_KEY, JSON.stringify(gh)); } catch (e) {} };
+const ghReady = () => !!(gh.token && gh.owner && gh.repo);
+const ghHeaders = () => ({ "Authorization": "Bearer " + gh.token, "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" });
+const ghContents = (path) => `https://api.github.com/repos/${encodeURIComponent(gh.owner)}/${encodeURIComponent(gh.repo)}/contents/${path}`;
+const ghErr = (st) => st === 401 ? "토큰이 올바르지 않거나 만료됐어요" : st === 403 ? "토큰 권한이 부족해요 (Contents 읽기·쓰기 필요)" : st === 404 ? "저장소를 찾지 못했어요 (아이디·이름·토큰 권한 확인)" : "GitHub 오류 " + st;
+const b64 = (str) => { let bin = ""; new TextEncoder().encode(str).forEach(c => bin += String.fromCharCode(c)); return btoa(bin); };
+
+// 연결돼 있으면 GitHub에서 바로(최신), 아니면 사이트 파일에서 읽어요
+async function readJson(path) {
+  if (ghReady()) {
+    try {
+      const r = await fetch(ghContents(path) + "?ref=" + encodeURIComponent(gh.branch) + "&_=" + Date.now(),
+        { headers: { ...ghHeaders(), "Accept": "application/vnd.github.raw+json" }, cache: "no-store" });
+      if (r.ok) return await r.json();
+    } catch (e) {}
+  }
+  const r = await fetch(path + "?_=" + Date.now(), { cache: "no-store" });
+  if (!r.ok) throw new Error(path + " 없음");
+  return await r.json();
+}
+
+async function putConfig() {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    let sha;
+    const g = await fetch(ghContents("config.json") + "?ref=" + encodeURIComponent(gh.branch) + "&_=" + Date.now(), { headers: ghHeaders(), cache: "no-store" });
+    if (g.ok) sha = (await g.json()).sha; else if (g.status !== 404) throw new Error(ghErr(g.status));
+    const body = { message: "사이트에서 설정 변경", content: b64(JSON.stringify(cfg, null, 2) + "\n"), branch: gh.branch };
+    if (sha) body.sha = sha;
+    const r = await fetch(ghContents("config.json"), { method: "PUT", headers: { ...ghHeaders(), "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    if (r.ok) return;
+    if (r.status === 409 || r.status === 422) continue;   // 그 사이 파일이 바뀜 → 다시 받아서 재시도
+    throw new Error(ghErr(r.status));
+  }
+  throw new Error("그 사이 다른 곳에서 파일이 바뀌었어요. 잠시 뒤 다시 시도해 주세요");
+}
+
+/* ---------- 저장 ---------- */
+let saveTimer = null, saving = false, again = false, topicsChanged = false;
+function setSync(msg, warn) { const el = $("sync-msg"); el.textContent = msg; el.classList.toggle("warn", !!warn); }
+function updateGhState() {
+  const el = $("gh-state");
+  el.textContent = ghReady() ? `GitHub 연결됨 ✓ (${gh.owner}/${gh.repo})` : "GitHub 미연결 — 지금은 이 기기에만 저장돼요";
+  el.className = ghReady() ? "ok" : "off";
+}
+function saveConfig() {
+  try { localStorage.setItem(CFG_LOCAL, JSON.stringify(cfg)); } catch (e) {}
+  if (!ghReady()) { setSync("이 기기에만 저장됨 · 위의 'GitHub 연결 설정'을 하면 폰·PC 공유와 뉴스 자동화에 반영돼요", true); return; }
+  setSync("저장 대기…");
+  clearTimeout(saveTimer); saveTimer = setTimeout(flushConfig, 800);
+}
+async function flushConfig() {
+  if (saving) { again = true; return; }
+  saving = true; setSync("GitHub에 저장 중…");
+  try {
+    await putConfig();
+    setSync(topicsChanged ? "저장됨 ✓ — 새 주제의 뉴스는 1~2분 뒤 자동으로 채워져요" : "저장됨 ✓");
+    if (topicsChanged) { topicsChanged = false; startPoll(); }
+  } catch (e) { setSync("저장 실패: " + e.message, true); }
+  finally { saving = false; if (again) { again = false; flushConfig(); } }
+}
+
+// 새 주제를 저장하면 뉴스가 채워질 때까지 주기적으로 확인
+let pollT = null;
+function startPoll() {
+  clearInterval(pollT); let n = 0;
+  pollT = setInterval(async () => {
+    n++;
+    try {
+      const d = await readJson("data.json");
+      if (cfg.topics.every(t => d.topics && d.topics[t.name] !== undefined)) {
+        clearInterval(pollT); dataCache = d; setStatus(d); renderBriefing(d.briefing); renderTopics();
+      }
+    } catch (e) {}
+    if (n >= 24) clearInterval(pollT);
+  }, POLL_MS);
+}
+
+async function loadConfig() {
+  let c = null;
+  if (ghReady()) { try { c = await readJson("config.json"); } catch (e) {} }
+  else {
+    try { const l = localStorage.getItem(CFG_LOCAL); if (l) c = JSON.parse(l); } catch (e) {}
+    if (!c) { try { c = await readJson("config.json"); } catch (e) {} }
+  }
+  cfg = cleanCfg(c || DEFAULT_CFG);
+}
+
+/* ---------- 제목 ---------- */
+function applyTitle() { $("site-title").textContent = cfg.title; document.title = cfg.title; $("title-input").value = cfg.title; }
+$("title-input").onchange = (e) => {
+  cfg.title = e.target.value.trim().slice(0, 40) || DEFAULT_CFG.title;
+  applyTitle(); saveConfig();
+};
+
+/* ---------- 관심 주제 추가/삭제 ---------- */
+$("topic-form").onsubmit = (e) => {
+  e.preventDefault();
+  const name = $("t-name").value.trim().slice(0, 30), query = $("t-query").value.trim().slice(0, 60) || name;
+  if (!name) return;
+  if (cfg.topics.some(t => t.name === name)) { alert("이미 있는 주제예요."); return; }
+  if (cfg.topics.length >= MAX_TOPICS) { alert(`주제는 최대 ${MAX_TOPICS}개까지 만들 수 있어요.`); return; }
+  cfg.topics.push({ name, query });
+  current = name; topicsChanged = true;
+  $("t-name").value = ""; $("t-query").value = "";
+  renderTopics(); saveConfig();
+};
+function removeTopic(name) {
+  if (cfg.topics.length <= 1) { alert("주제는 최소 1개는 있어야 해요."); return; }
+  if (!confirm(`"${name}" 주제를 삭제할까요?`)) return;
+  cfg.topics = cfg.topics.filter(t => t.name !== name);
+  topicsChanged = true;
+  renderTopics(); saveConfig();
+}
+
+/* ---------- 바로가기 추가/삭제 ---------- */
+function renderLinks() {
+  $("links").innerHTML = cfg.shortcuts.length
+    ? cfg.shortcuts.map((l, i) => `<div class="link-row"><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.name)} →</a>` +
+        `<button class="xbtn edit-only" data-i="${i}" aria-label="${esc(l.name)} 삭제" type="button">×</button></div>`).join("")
+    : `<div class="empty">바로가기가 없어요. 편집 모드에서 추가해 보세요.</div>`;
+}
+$("links").addEventListener("click", (e) => {
+  const b = e.target.closest(".xbtn"); if (!b) return;
+  cfg.shortcuts.splice(+b.dataset.i, 1); renderLinks(); saveConfig();
+});
+$("link-form").onsubmit = (e) => {
+  e.preventDefault();
+  const name = $("l-name").value.trim().slice(0, 24), url = normUrl($("l-url").value);
+  if (!name) return;
+  if (!url) { alert("주소 형식이 올바르지 않아요. 예) naver.com 또는 https://naver.com"); return; }
+  if (cfg.shortcuts.length >= MAX_LINKS) { alert(`바로가기는 최대 ${MAX_LINKS}개까지예요.`); return; }
+  cfg.shortcuts.push({ name, url });
+  $("l-name").value = ""; $("l-url").value = "";
+  renderLinks(); saveConfig();
+};
+
+/* ---------- 편집 모드 on/off ---------- */
+function setEditing(on) {
+  document.body.classList.toggle("editing", on);
+  $("edit-btn").textContent = on ? "✅ 완료" : "✏️ 편집";
+  if (on) { $("theme-panel").classList.remove("open"); updateGhState(); setSync(""); }
+  else { $("gh-panel").classList.remove("open"); }
+}
+$("edit-btn").onclick = () => setEditing(!document.body.classList.contains("editing"));
+
+/* ---------- GitHub 연결 창 ---------- */
+function openGh() {
+  $("gh-token").value = ""; $("gh-owner").value = gh.owner || ""; $("gh-repo").value = gh.repo || "";
+  $("gh-result").textContent = ghReady() ? "현재 연결돼 있어요. 토큰을 바꾸려면 새로 붙여넣으세요." : ""; $("gh-result").className = "panel-note";
+  $("gh-panel").classList.add("open");
+}
+$("gh-open").onclick = openGh;
+$("gh-close").onclick = () => $("gh-panel").classList.remove("open");
+$("gh-disconnect").onclick = () => {
+  gh.token = ""; saveGh(); updateGhState();
+  $("gh-result").textContent = "연결을 해제했어요. 이 기기에서 토큰이 지워졌습니다."; $("gh-result").className = "panel-note";
+};
+$("gh-connect").onclick = async () => {
+  const res = $("gh-result");
+  const token = $("gh-token").value.trim() || gh.token, owner = $("gh-owner").value.trim(), repo = $("gh-repo").value.trim();
+  if (!token || !owner || !repo) { res.textContent = "토큰, 아이디, 저장소 이름을 모두 입력해 주세요."; res.className = "panel-note bad"; return; }
+  res.textContent = "확인하는 중…"; res.className = "panel-note";
+  const prev = { ...gh };
+  Object.assign(gh, { token, owner, repo });
+  try {
+    const r = await fetch(`https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`, { headers: ghHeaders(), cache: "no-store" });
+    if (!r.ok) throw new Error(ghErr(r.status));
+    const info = await r.json();
+    if (info.permissions && info.permissions.push === false) throw new Error("이 토큰으로는 파일을 바꿀 수 없어요 (Contents: Read and write 필요)");
+    gh.branch = info.default_branch || "main";
+    saveGh(); updateGhState();
+    res.textContent = "연결됐어요 ✓"; res.className = "panel-note ok";
+    // 연결 전에 이 기기에서 바꾼 내용이 있으면 GitHub에 올릴지 물어봅니다
+    let local = null, remote = null;
+    try { local = cleanCfg(JSON.parse(localStorage.getItem(CFG_LOCAL) || "null")); } catch (e) {}
+    try { remote = cleanCfg(await readJson("config.json")); } catch (e) {}
+    if (local && (!remote || JSON.stringify(local) !== JSON.stringify(remote)) &&
+        confirm("연결 전에 이 기기에서 바꾼 설정이 있어요. GitHub에 저장할까요?\n(취소하면 GitHub에 있는 설정을 불러옵니다)")) {
+      cfg = local; topicsChanged = true; saveConfig();
+    } else { cfg = remote || cfg; }
+    applyTitle(); renderLinks(); renderTopics();
+  } catch (e) {
+    Object.assign(gh, prev);
+    res.textContent = "연결 실패: " + e.message; res.className = "panel-note bad";
+  }
+};
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("gh-panel").classList.remove("open"); });
+
+/* ---------- 칸 위치 바꾸기(끌어서 이동) ---------- */
+const DEFAULT_LAYOUT = { a: ["briefing", "topics"], b: ["schedule", "links"] };
+function currentLayout() {
+  const ids = (col) => [...col.children].filter(n => n.tagName === "SECTION").map(n => n.dataset.id);
+  return { a: ids($("col-a")), b: ids($("col-b")) };
+}
+function placeLayout(l) {
+  const map = {}; document.querySelectorAll("section[data-id]").forEach(sec => map[sec.dataset.id] = sec);
+  const used = new Set();
+  [["a", $("col-a")], ["b", $("col-b")]].forEach(([k, col]) => (l[k] || []).forEach(id => {
+    if (map[id] && !used.has(id)) { col.appendChild(map[id]); used.add(id); }
+  }));
+  Object.keys(map).forEach(id => { if (!used.has(id)) $("col-b").appendChild(map[id]); });
+}
+function applyLayout() { try { const l = JSON.parse(localStorage.getItem(LAYOUT_KEY) || "null"); if (l) placeLayout(l); } catch (e) {} }
+function saveLayout() { try { localStorage.setItem(LAYOUT_KEY, JSON.stringify(currentLayout())); } catch (e) {} }
+$("layout-reset").onclick = () => { try { localStorage.removeItem(LAYOUT_KEY); } catch (e) {} placeLayout(DEFAULT_LAYOUT); };
+
+(function dragSections() {
+  let d = null;
+  const cols = () => [$("col-a"), $("col-b")];
+  document.addEventListener("pointerdown", (e) => {
+    const h = e.target.closest(".handle");
+    if (!h || !document.body.classList.contains("editing") || e.button > 0) return;
+    const sec = h.closest("section"), r = sec.getBoundingClientRect();
+    const ph = document.createElement("div");
+    ph.className = "drop-ph"; ph.style.height = r.height + "px";
+    sec.parentNode.insertBefore(ph, sec);
+    d = { sec, ph, dx: e.clientX - r.left, dy: e.clientY - r.top, y: e.clientY };
+    sec.style.cssText = `position:fixed;left:${r.left}px;top:${r.top}px;width:${r.width}px;z-index:60;margin:0;opacity:.93;box-shadow:0 12px 30px rgba(0,0,0,.25)`;
+    sec.classList.add("dragging");
+    d.timer = setInterval(() => {                     // 화면 위·아래 끝에 가면 자동으로 스크롤
+      if (d.y < 70) window.scrollBy(0, -14); else if (d.y > innerHeight - 70) window.scrollBy(0, 14);
+    }, 16);
+    e.preventDefault();
+  });
+  document.addEventListener("pointermove", (e) => {
+    if (!d) return;
+    d.y = e.clientY;
+    d.sec.style.left = (e.clientX - d.dx) + "px"; d.sec.style.top = (e.clientY - d.dy) + "px";
+    let best = null, bd = Infinity;
+    cols().forEach(c => {
+      const r = c.getBoundingClientRect();
+      const dx = e.clientX < r.left ? r.left - e.clientX : e.clientX > r.right ? e.clientX - r.right : 0;
+      const dy = e.clientY < r.top ? r.top - e.clientY : e.clientY > r.bottom ? e.clientY - r.bottom : 0;
+      const dist = dx * dx + dy * dy;
+      if (dist < bd) { bd = dist; best = c; }
+    });
+    const others = [...best.children].filter(n => n !== d.sec && n !== d.ph);
+    const before = others.find(n => { const r = n.getBoundingClientRect(); return e.clientY < r.top + r.height / 2; }) || null;
+    if (d.ph.parentNode !== best || d.ph.nextSibling !== before) best.insertBefore(d.ph, before);
+    e.preventDefault();
+  }, { passive: false });
+  const end = () => {
+    if (!d) return;
+    clearInterval(d.timer);
+    d.ph.replaceWith(d.sec);
+    d.sec.style.cssText = ""; d.sec.classList.remove("dragging");
+    d = null; saveLayout();
+  };
+  document.addEventListener("pointerup", end);
+  document.addEventListener("pointercancel", end);
+})();
+
 /* ---------- 시작 ---------- */
 renderCalendar();
-loadData().then(d => { renderBriefing(d.briefing); renderTopics(d.topics); });
+applyLayout();
+applyTitle(); renderLinks(); renderTopics(); updateGhState();
+(async () => {
+  await loadConfig();
+  applyTitle(); renderLinks();
+  dataCache = await loadData();
+  renderBriefing(dataCache.briefing); renderTopics();
+})();
 </script>
 </body>
 </html>

@@ -8,14 +8,37 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 
-# 관심 주제와 검색어: 여기만 고치면 주제를 바꿀 수 있어요.
-TOPICS = {
-    "부동산 정책": "부동산 정책",
-    "반도체": "반도체",
-    "AI": "인공지능 AI",
-    "양자컴퓨터": "양자컴퓨터",
-    "청약": "청약",
-}
+# 관심 주제는 config.json에서 읽어요. 사이트의 '편집' 화면에서 주제를 추가/삭제하면 이 파일이 바뀝니다.
+DEFAULT_TOPICS = [
+    {"name": "부동산 정책", "query": "부동산 정책"},
+    {"name": "반도체", "query": "반도체"},
+    {"name": "AI", "query": "인공지능 AI"},
+    {"name": "양자컴퓨터", "query": "양자컴퓨터"},
+    {"name": "청약", "query": "청약"},
+]
+MAX_TOPICS = 12
+
+
+def load_topics():
+    try:
+        with open("config.json", encoding="utf-8") as f:
+            raw = json.load(f).get("topics", [])
+        topics = {}
+        for t in raw:
+            name = str(t.get("name", "")).strip()[:30]
+            query = str(t.get("query", "")).strip()[:60] or name
+            if name and name not in topics:
+                topics[name] = query
+        if topics:
+            return dict(list(topics.items())[:MAX_TOPICS])
+        print("[안내] config.json에 주제가 없어 기본 주제를 사용합니다.")
+    except FileNotFoundError:
+        print("[안내] config.json이 없어 기본 주제를 사용합니다.")
+    except Exception as e:
+        print(f"[경고] config.json을 읽지 못해 기본 주제를 사용합니다: {e}")
+    return {t["name"]: t["query"] for t in DEFAULT_TOPICS}
+
+
 PER_TOPIC = 6  # 주제당 기사 수
 KST = timezone(timedelta(hours=9))
 
@@ -58,7 +81,7 @@ def fetch(query):
 
 def main():
     topics = {}
-    for name, query in TOPICS.items():
+    for name, query in load_topics().items():
         try:
             topics[name] = fetch(query)
         except Exception as e:  # 한 주제가 실패해도 나머지는 계속 진행
