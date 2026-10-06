@@ -61,16 +61,87 @@
   .cal-frame { width: 100%; height: 360px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
   .cal-help { font-size: 13px; color: var(--muted); background: var(--bg); border: 1px dashed var(--line); border-radius: 10px; padding: 12px; }
   .links a { display: block; padding: 6px 0; font-size: 14px; color: var(--accent); }
+
+  /* ---------- 꾸미기(테마) ---------- */
+  .wrap { position: relative; z-index: 1; }
+  #bg-layer, #bg-shade { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  #bg-layer { background-size: cover; background-position: center; background-repeat: no-repeat; }
+  #bg-shade { background: #000; opacity: 0; }
+  .has-bg section, .has-bg header {
+    background: color-mix(in srgb, var(--card) 82%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  }
+  .has-bg header { border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; }
+  .head-right { display: flex; align-items: center; gap: 10px; }
+  button.paint {
+    border: 1px solid var(--line); background: var(--card); color: var(--text);
+    border-radius: 99px; padding: 6px 12px; font-size: 13px; cursor: pointer; font-family: inherit;
+  }
+  #theme-panel {
+    position: fixed; top: 0; right: 0; bottom: 0; width: min(340px, 100%); z-index: 20;
+    background: var(--card); color: var(--text); border-left: 1px solid var(--line);
+    padding: 20px; overflow-y: auto; transform: translateX(100%); transition: transform .2s;
+    box-shadow: -8px 0 30px rgba(0,0,0,.15);
+  }
+  #theme-panel.open { transform: none; }
+  #theme-panel h3 { margin: 0 0 4px; font-size: 16px; display: flex; justify-content: space-between; align-items: center; }
+  #theme-panel h4 { margin: 20px 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
+  #theme-panel .close { background: none; border: 0; font-size: 22px; color: var(--muted); cursor: pointer; }
+  .swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .swatch {
+    border: 2px solid var(--line); border-radius: 10px; padding: 8px 6px; cursor: pointer;
+    background: var(--bg); color: var(--text); font-family: inherit; font-size: 12px; text-align: center;
+  }
+  .swatch i { display: block; height: 22px; border-radius: 6px; margin-bottom: 6px; }
+  .swatch[aria-pressed="true"] { border-color: var(--accent); }
+  .panel-row { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .panel-row input[type=range] { flex: 1; padding: 0; }
+  .panel-row input[type=color] { width: 44px; height: 32px; padding: 2px; }
+  .btn-sm {
+    border: 1px solid var(--line); background: var(--bg); color: var(--text); border-radius: 8px;
+    padding: 7px 12px; font-size: 13px; cursor: pointer; font-family: inherit;
+  }
+  .panel-note { font-size: 12px; color: var(--muted); margin-top: 8px; }
+
+  .slot { border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-bottom: 10px; }
+  .slot-head { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+  .slot-head .now { font-size: 11px; font-weight: 500; color: var(--accent); background: var(--accent-soft); padding: 1px 8px; border-radius: 99px; }
+  .slot-thumb { height: 64px; border-radius: 8px; background: var(--bg) center/cover no-repeat; border: 1px dashed var(--line);
+    display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .slot .panel-row { margin-top: 8px; }
 </style>
 </head>
 <body>
+<div id="bg-layer"></div><div id="bg-shade"></div>
+<aside id="theme-panel" aria-label="꾸미기 설정">
+  <h3>🎨 꾸미기 <button class="close" id="panel-close" type="button" aria-label="닫기">×</button></h3>
+
+  <h4>색상 테마</h4>
+  <div class="swatches" id="swatches"></div>
+
+  <h4>포인트 색</h4>
+  <div class="panel-row">
+    <input type="color" id="accent-pick" aria-label="포인트 색">
+    <button class="btn-sm" id="accent-reset" type="button">테마 색으로</button>
+  </div>
+
+  <h4>배경 사진</h4>
+  <div class="panel-note" id="device-now" style="margin:0 0 10px"></div>
+  <div id="slots"></div>
+
+  <h4>초기화</h4>
+  <button class="btn-sm" id="theme-reset" type="button">모두 기본값으로</button>
+</aside>
 <div class="wrap">
   <header>
     <div>
       <h1>My Daily Dashboard</h1>
       <div class="date" id="today"></div>
     </div>
-    <div class="status sample" id="status">샘플 데이터 표시 중</div>
+    <div class="head-right">
+      <div class="status sample" id="status">샘플 데이터 표시 중</div>
+      <button class="paint" id="paint-btn" type="button">🎨 꾸미기</button>
+    </div>
   </header>
 
   <div class="grid">
@@ -239,6 +310,130 @@ function renderCalendar() {
     "&ctz=Asia%2FSeoul&mode=AGENDA&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0";
   $("cal-box").innerHTML = `<iframe class="cal-frame" src="${src}" title="구글 캘린더 일정"></iframe>`;
 }
+
+/* ---------- 꾸미기(테마) ---------- */
+const PRESETS = [
+  { id: "auto",  name: "기본(자동)", prev: "#2f5d50", vars: null },
+  { id: "cream", name: "크림", prev: "#f6f5f1", vars: { "--bg":"#f6f5f1","--card":"#ffffff","--text":"#1d1d1b","--muted":"#6b6a66","--line":"#e4e2db","--accent":"#2f5d50" } },
+  { id: "blue",  name: "블루", prev: "#2f5fd0", vars: { "--bg":"#eef3fa","--card":"#ffffff","--text":"#14213d","--muted":"#5c6b85","--line":"#d8e1ef","--accent":"#2f5fd0" } },
+  { id: "pink",  name: "핑크", prev: "#c2456b", vars: { "--bg":"#fbf1f3","--card":"#ffffff","--text":"#3a1d26","--muted":"#86656f","--line":"#f0d9de","--accent":"#c2456b" } },
+  { id: "dark",  name: "다크", prev: "#1d1f1c", vars: { "--bg":"#141513","--card":"#1d1f1c","--text":"#ecebe6","--muted":"#9b9a94","--line":"#2b2d29","--accent":"#7fb8a4" } },
+  { id: "night", name: "밤보라", prev: "#a78bfa", vars: { "--bg":"#17141f","--card":"#211d2c","--text":"#eeeaf6","--muted":"#a49bb8","--line":"#342e44","--accent":"#a78bfa" } }
+];
+const SLOTS = [
+  { id: "pc",    label: "🖥 PC 화면 (넓은 화면)", max: 1600 },
+  { id: "phone", label: "📱 폰 화면 (좁은 화면)", max: 1200 }
+];
+const T_KEY = "dash-theme-v1";
+const bgKey = (id) => `dash-bg-${id}-v1`;
+const phoneMQ = window.matchMedia("(max-width: 800px)");
+const activeSlot = () => phoneMQ.matches ? "phone" : "pc";
+
+let theme = { preset: "auto", accent: null, dark: { pc: 25, phone: 25 } };
+try {
+  const saved = JSON.parse(localStorage.getItem(T_KEY) || "{}");
+  Object.assign(theme, saved);
+  if (typeof theme.dark !== "object" || theme.dark === null) theme.dark = { pc: +saved.dark || 25, phone: +saved.dark || 25 };
+} catch (e) {}
+const saveTheme = () => { try { localStorage.setItem(T_KEY, JSON.stringify(theme)); } catch (e) {} };
+const getBg = (id) => { try { return localStorage.getItem(bgKey(id)); } catch (e) { return null; } };
+
+// 예전 버전에서 저장한 사진이 있으면 PC 칸으로 옮겨 줍니다
+try {
+  const old = localStorage.getItem("dash-bg-v1");
+  if (old && !getBg("pc")) localStorage.setItem(bgKey("pc"), old);
+  if (old) localStorage.removeItem("dash-bg-v1");
+} catch (e) {}
+
+function applyTheme() {
+  const root = document.documentElement.style;
+  ["--bg","--card","--text","--muted","--line","--accent","--accent-soft"].forEach(v => root.removeProperty(v));
+  const p = PRESETS.find(x => x.id === theme.preset) || PRESETS[0];
+  if (p.vars) Object.entries(p.vars).forEach(([k, v]) => root.setProperty(k, v));
+  if (theme.accent) root.setProperty("--accent", theme.accent);
+  if (p.vars || theme.accent) root.setProperty("--accent-soft", "color-mix(in srgb, var(--accent) 15%, var(--card))");
+  $("accent-pick").value = theme.accent || (getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#2f5d50");
+  document.querySelectorAll(".swatch").forEach(b => b.setAttribute("aria-pressed", b.dataset.id === theme.preset));
+}
+
+// 지금 화면 너비에 맞는 칸의 사진을 배경으로 적용
+function applyBg() {
+  const id = activeSlot(), data = getBg(id);
+  $("bg-layer").style.backgroundImage = data ? `url("${data}")` : "none";
+  $("bg-shade").style.opacity = data ? ((theme.dark[id] ?? 25) / 100).toString() : "0";
+  document.body.classList.toggle("has-bg", !!data);
+  $("device-now").textContent = "지금 이 화면은 「" + (id === "phone" ? "폰 화면" : "PC 화면") + "」 설정을 사용 중이에요.";
+  renderSlots();
+}
+
+function shrinkImage(file, max) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file), img = new Image();
+    img.onload = () => {
+      const r = Math.min(1, max / Math.max(img.width, img.height));
+      const c = document.createElement("canvas");
+      c.width = Math.round(img.width * r); c.height = Math.round(img.height * r);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url);
+      resolve(c.toDataURL("image/jpeg", 0.8));
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error("이미지를 읽지 못했어요")); };
+    img.src = url;
+  });
+}
+
+function renderSlots() {
+  const now = activeSlot();
+  $("slots").innerHTML = SLOTS.map(sl => {
+    const data = getBg(sl.id);
+    return `<div class="slot" data-slot="${sl.id}">
+      <div class="slot-head"><span>${sl.label}</span>${sl.id === now ? '<span class="now">사용 중</span>' : ""}</div>
+      <div class="slot-thumb" ${data ? `style="background-image:url('${data}')"` : ""}>${data ? "" : "사진 없음"}</div>
+      <div class="panel-row">
+        <label class="btn-sm" for="file-${sl.id}" style="cursor:pointer">사진 고르기</label>
+        <input type="file" id="file-${sl.id}" data-slot="${sl.id}" accept="image/*" hidden>
+        <button class="btn-sm" type="button" data-remove="${sl.id}">지우기</button>
+      </div>
+      <div class="panel-row"><span>어둡게</span><input type="range" min="0" max="80" value="${theme.dark[sl.id] ?? 25}" data-dark="${sl.id}"></div>
+    </div>`;
+  }).join("");
+
+  $("slots").querySelectorAll("input[type=file]").forEach(inp => inp.onchange = async (e) => {
+    const id = inp.dataset.slot, f = e.target.files[0]; if (!f) return;
+    try {
+      const data = await shrinkImage(f, SLOTS.find(x => x.id === id).max);
+      try { localStorage.setItem(bgKey(id), data); }
+      catch (err) { alert("이 브라우저에는 사진을 저장할 공간이 부족해요. 더 작은 사진을 골라 주세요."); }
+    } catch (err) { alert(err.message); }
+    applyBg();
+  });
+  $("slots").querySelectorAll("[data-remove]").forEach(b => b.onclick = () => {
+    try { localStorage.removeItem(bgKey(b.dataset.remove)); } catch (e) {}
+    applyBg();
+  });
+  // 슬라이더는 드래그 중에 목록을 다시 그리지 않도록 투명도만 바로 바꿉니다
+  $("slots").querySelectorAll("[data-dark]").forEach(r => r.oninput = () => {
+    theme.dark[r.dataset.dark] = +r.value; saveTheme();
+    if (r.dataset.dark === activeSlot() && getBg(r.dataset.dark)) $("bg-shade").style.opacity = (r.value / 100).toString();
+  });
+}
+
+$("swatches").innerHTML = PRESETS.map(p =>
+  `<button type="button" class="swatch" data-id="${p.id}" aria-pressed="false"><i style="background:${p.prev}"></i>${p.name}</button>`).join("");
+$("swatches").querySelectorAll(".swatch").forEach(b => b.onclick = () => { theme.preset = b.dataset.id; theme.accent = null; saveTheme(); applyTheme(); });
+$("accent-pick").oninput = (e) => { theme.accent = e.target.value; saveTheme(); applyTheme(); };
+$("accent-reset").onclick = () => { theme.accent = null; saveTheme(); applyTheme(); };
+$("theme-reset").onclick = () => {
+  theme = { preset: "auto", accent: null, dark: { pc: 25, phone: 25 } };
+  try { localStorage.removeItem(T_KEY); SLOTS.forEach(sl => localStorage.removeItem(bgKey(sl.id))); } catch (e) {}
+  applyTheme(); applyBg();
+};
+$("paint-btn").onclick = () => $("theme-panel").classList.toggle("open");
+$("panel-close").onclick = () => $("theme-panel").classList.remove("open");
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("theme-panel").classList.remove("open"); });
+phoneMQ.addEventListener("change", applyBg);   // 창 크기를 바꾸거나 폰을 돌리면 맞는 설정으로 전환
+
+applyTheme(); applyBg();
 
 /* ---------- 시작 ---------- */
 renderCalendar();
