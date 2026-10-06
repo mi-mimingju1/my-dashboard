@@ -20,10 +20,6 @@
     {
       "name": "청약",
       "query": "청약"
-    },
-    {
-      "name": "삼성전자",
-      "query": "삼성전자"
     }
   ],
   "shortcuts": [
@@ -34,6 +30,10 @@
     {
       "name": "구글 캘린더",
       "url": "https://calendar.google.com/"
+    },
+    {
+      "name": "국토교통부",
+      "url": "https://www.molit.go.kr/"
     }
   ]
 }
