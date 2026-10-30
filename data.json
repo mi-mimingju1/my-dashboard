@@ -1,45 +1,63 @@
 {
-  "updated": "2026-10-30 07:38",
+  "updated": "2026-10-31 07:37",
   "briefing": [
     {
-      "title": "[사설] 서울 중심 부동산 정책 나올 때마다 지방은 죽을 맛",
+      "title": "[속보]李 대통령 국정지지율 39%…부정평가 49% \"부동산 정책 이유, 7월 넷째 주부터 최상위\"",
       "summary": "[부동산 정책] 관련 주요 기사",
-      "source": "영남일보",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5UZjNJbFNGSWpOY1lfRWNka3RkUEJxRVM3WVJzTExiU3p5a3JRNkVGb3JoOWwtV3JGV0xtaEFldnJRaEVHX0dPc255YUhsejAwZlRRUDgxQ19ZcTdwcGVROHF4bzZROXZnUmZF?oc=5"
+      "source": "이코노미스트",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9Ub05BcE1pa0RZZ2xMYmpxQU1kT1loczY0dHZaX2NZQU9VZzF6S1VuYVNfNXZKNTE0S0xPVVRGSGF4OWwxMGxDNUhZUFkwUFpkMllHM2lYTVg4MlRveXp5QXNn?oc=5"
     },
     {
-      "title": "[만물상] ‘사우디 석유’ 제친 ‘K 반도체’",
+      "title": "인텔 28% 폭락‥미 반도체지수 7% 넘게 하락",
       "summary": "[반도체] 관련 주요 기사",
-      "source": "조선일보",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOclpJWXJSVnJDYmpuYzhVZ1B0Qm5pVlVzZE11YW9obzdLOWN0eWxsODJ6b3daRjNCb0FDYU8ydV80QV9fVEFtMXhyeER5RHpGMUdaT0NualhPTFFtNTg2VGQzQ2J5VEc0SlRCV0J4RmpZeDNLSjdoQks2UkwxTXY3VEw3ajQxSm8?oc=5"
+      "source": "MBC 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1hM1l5cGxuNEt2UzJPSjNFcjRlOFBLMFE0TmtQUExYZ2RvQndwd0treXZNRnNwSXNFR2UtU2lqQTY3X1RUUkVsVkZncHlWRzNUNTlLRng3VEJLYVZTRHRIMHg1TFEzVkEzTDlCQVMwYkJlbVY50gF0QVVfeXFMTXVTT1VqQkROWW9NbU9FbjFDQTRtR1pLZkN3czRVZnFMYTB4YWZPbnl0ZHhhOEtTaExtMF9LeFdQZkx0MkZPRHpLR2xEaG81dVRfLW5TVXlzV1BOZ3prTV9rOHdJSUc5ZnU5QlFkc3BFMWYteFo?oc=5"
     },
     {
-      "title": "AI 시대 한국의 미래, 공학에 묻는다…공학한림원 '10대 질문' 선정",
+      "title": "트럼프, '인공지능→슈퍼지능' 압박에 실리콘밸리도 용어 바꾸나",
       "summary": "[AI] 관련 주요 기사",
-      "source": "DongA Science",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBoOW9kZGpib0gzMXdKUmVMekl5bHc2M1ZmYVF2YUVVdFR6SWl0aWhnTUlXV1MxMEJnYkZvU2JqY2YwVXFKSFBlSHNCMXlXR3hfRTI4cA?oc=5"
+      "source": "매일경제 마켓",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1yRklrU3dCeVlqVUk2VWx0LXI3Ull1czQxdUd1MDNYcElGaE93ZzU0dVhNdnA2SWVRWVB3QWZacW94bnFELU0zczNPVG5pR3VzV0E?oc=5"
     },
     {
-      "title": "메가존클라우드·KISTI, 양자컴퓨팅·AI 융합 세미나 열어",
+      "title": "IQM, 완전한 54큐비트 프로세서 전반에서 얽힘 보여주며 클라우드 사용자에게 전체 칩 성능 제공",
       "summary": "[양자컴퓨터] 관련 주요 기사",
-      "source": "디지털경제뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5QYk50SXNLZXFCaE5XOU1Xbzc5QmZhSDZ1UnI3RmNTdmlqeFJsX1RLMFl2Rk5nemJFcmJSOHhHaUFUVGxIQ2dTLWtzdjFNQ2dYT1B6VE1nRk8taTlyMC1kMUswVGxLaVB2Q2c?oc=5"
+      "source": "https://www.koreasprint.com/",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93a18wdWtCTG5mdGJ4d2VvN25xZDRMaTBUaXppa0tOWTU3bVVYYmxIZU1JaUVacHNaa0k0eGc2S2tQbHFacUJ5Z0Qxc0VNLWhEWWhFY01ESkpWc0tVbEctVG92WXRSaldkaDBsdDlR?oc=5"
     },
     {
-      "title": "[건설명가] 청약마감 후 문의 줄이어, 참여의향서 접수",
+      "title": "11월 전국 분양 봇물 속 서울은 '1369가구'…귀한 청약 단지 어디? - 머니투데이",
       "summary": "[청약] 관련 주요 기사",
-      "source": "중앙일보",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1tYnFqVlVuVVdrb3ZIWDdBX2tacTRQOG9tNHprN1BpRTZ2YUxKeEVBUnBFa2JQb1pTMkxQb3pNMmtYaXlZdnJNYnZ1RVVWTGpxY3NuU3BB?oc=5"
+      "source": "머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB1aGZ6YUVPbVFabXF1WXUxTEVPaDRwSHZsclh2SnZZY0FoNi0ydVFOZkZvYUsxZzl3VHEzSFZiOFlkOEhNeURMS05lQ2xsT2ZtUUhzZ1dRRzJrc0xJUUtMVGprVHhYSTZmOWNJRV91TdIBb0FVX3lxTFB1aGZ6YUVPbVFabXF1WXUxTEVPaDRwSHZsclh2SnZZY0FoNi0ydVFOZkZvYUsxZzl3VHEzSFZiOFlkOEhNeURMS05lQ2xsT2ZtUUhzZ1dRRzJrc0xJUUtMVGprVHhYSTZmOWNJRV91TQ?oc=5"
     },
     {
-      "title": "삼전 330% 폭등 맞힌 男…“다음엔 이 종목 엄청나게 뛸 것”",
+      "title": "‘분기영익 100조 시대’ 삼성전자, 주당 4601원 배당한다",
       "summary": "[삼성전자] 관련 주요 기사",
-      "source": "미주중앙일보",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Sc2VQT20zMGFNcGxQa1N6YWlfWmtyM0N0LWRtVVhXWkZiZnV3WG9yRlVpREVUcWJ5YnZpOThGMmlEMFdKT2dXb1d2MGxsd3BqUHlVNVh4cWFFdl9FQ1o3Z1pR?oc=5"
+      "source": "문화일보",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1pUndwR1pQdW5fdjlsbENHcktsMDladGFWMWo0VG1rbDFWV0NIVE9XWjFjWFo4b3VBYjNKcklXQVpDTzJYUXYybUc2M1VjTjFa?oc=5"
     }
   ],
   "topics": {
     "부동산 정책": [
+      {
+        "title": "[속보]李 대통령 국정지지율 39%…부정평가 49% \"부동산 정책 이유, 7월 넷째 주부터 최상위\"",
+        "source": "이코노미스트",
+        "date": "10-30 13:50",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9Ub05BcE1pa0RZZ2xMYmpxQU1kT1loczY0dHZaX2NZQU9VZzF6S1VuYVNfNXZKNTE0S0xPVVRGSGF4OWwxMGxDNUhZUFkwUFpkMllHM2lYTVg4MlRveXp5QXNn?oc=5"
+      },
+      {
+        "title": "李대통령 지지율 39%…부정 평가 49% ‘부동산 정책’, ‘경제·민생’, ‘국방·안보·대북’",
+        "source": "강원일보",
+        "date": "10-30 12:08",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5hbFE3VmNvY195OGd5cmtPR2VheVBDN2FBUUVaVGo5d1JodXFkSzVHVzFSX2xwdm9sdUloRlM1cEtJZDJna2dtRjFVS1ZNSVZSd1ZTLVgwZlBOY1k?oc=5"
+      },
+      {
+        "title": "국민 53% “1년 뒤 집값 오른다”…전월세 상승 전망은 66%",
+        "source": "웰페어뉴스",
+        "date": "10-30 15:50",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5JbWNra2JlZFRNV3JMalZHUzhacnZ4SVFwU2FublVGeThvaTZlSkE2OUFROXk0TFZlTXJsdlkzTnBfbVl4TjVOY3A0eWV1VkJFSzZheTBZZ25GdVRKcFlnRjJMX3lWMUgwc3FTbTlfZw?oc=5"
+      },
       {
         "title": "[사설] 서울 중심 부동산 정책 나올 때마다 지방은 죽을 맛",
         "source": "영남일보",
@@ -47,224 +65,206 @@
         "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5UZjNJbFNGSWpOY1lfRWNka3RkUEJxRVM3WVJzTExiU3p5a3JRNkVGb3JoOWwtV3JGV0xtaEFldnJRaEVHX0dPc255YUhsejAwZlRRUDgxQ19ZcTdwcGVROHF4bzZROXZnUmZF?oc=5"
       },
       {
-        "title": "지방 부동산 대책은 빠졌다…또 수도권 주택공급만",
-        "source": "대전일보",
-        "date": "10-29 17:31",
-        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9vZHNmeUl0TkdtRXFQQVEtRGdEMUNJdTF0cXhvbi1CaVNHNDFRVlNtUnZsVEpuYmc1VWNnOHd2Q0tnb1ZONXMwWW1mR1pQRS1mMFFMLVhrU3NZTjQ0NEtHUHBuaVh4Yi12V0pkNDFyTdIBc0FVX3lxTE5iclIwS2tyQlgwS2RQUWZTTDlTME1kM1dWSEEyWk9OaWtsMGhYZnBPQ3hSaXVCMzl3RGh3TnhKMHJweUpBT1FnVkV0NVFjZFVxaHgybzhMYUlkRTdCd1kyUWdGTkFqYWRmdm1DMXFwbl9LY2s?oc=5"
+        "title": "이재명 대통령 직무 부정 49%···’부동산 정책' 부정 이유 1위",
+        "source": "더리포트",
+        "date": "10-30 11:58",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9lZG16UzF0SVRSZFA1cEgzcGxMYkNweVRCU09EU2prMk0wNFI1VUtyUnBZQU42VEFMZEF4ZG53NldiT0cwbzZlcmcydXh0TUpHeTNwaEk0a3JUcUZHX1g5bUlqRDdZd2RHb3gwYVR3?oc=5"
       },
       {
-        "title": "압구정 아파트 35억 하락 거래…이재명 정부 부동산 정책, 강남 불패 신화 흔들리기 시작했다:내외신문",
-        "source": "내외신문",
-        "date": "10-29 12:25",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB3UmlRcTZ0T0RfejN4dGJHQkg3TnpNbnhoQ1pMWFp2a1lVZTBWQ1BSMWI5SnV5Q1dvOVctUy13RHNLMlFxZldMVEk1ekROUnA0UkF0eDVQaXZPUHVXVWVYWUJqTzjSAWRBVV95cUxQd1JpUXE2dE9EX3ozeHRiR0JIN056TW54aENaTFhadmtZVWUwVkNQUjFiOUp1eUNXbzlXLVMtd0RzSzJRcWZXTFRJNXpETlJwNFJBdHg1UGl2T1B1V1VlWFlCak84?oc=5"
-      },
-      {
-        "title": "[칼럼] 과다한 징벌적 과세와 임대차 규제의 역설, 누구를 위한 부동산 정책인가",
-        "source": "시사타임즈",
-        "date": "10-29 11:53",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaG54SG5CMmVFazJEZUhwRi0xb2hTdTFPcG85ZHgzR2JOQzN4YUp2OWxCRUNQV3Z0WFRfSnNfN2FoYWpmRkNpbmRVV2tSQXFyOFNxaktodEhhdm9jQ2ttbFdwazUxazl3N092UWd3azJmN242TTZhd2lLNlVNWGlsM29HNGc?oc=5"
-      },
-      {
-        "title": "[CEONEWS TOP CEO 421] 이성훈 LH 사장, 취임 100일 '광폭 행보'…부동산 민심의 최전선에 서다",
-        "source": "CEONEWS",
-        "date": "10-29 13:25",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9aYzBtZXpFd3lUbnR5b0hucHU0TFAtS3VtMzBRN0xKc1VabTJkUVgxQTN4QTl4WlpQNVhSNW5VZzBRRG9lLVdyMzJKcldJYjBtRFNzY0dQcWlvTUgzd21B?oc=5"
-      },
-      {
-        "title": "\"진보는 ‘닥치고 임대’ 보수는 ‘닥치고 소유’로\"...조정훈 \"청년도 집 살 수 있어야\"",
-        "source": "JTBC",
-        "date": "10-29 10:19",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBYUVhfNTQxMzRmdUZZaXAybm5zd1YwdjBTejd6cEl0TXpkcTFxUVBad1lCT0lxT083Y3AzbWJ1YUg4c3J1VVhydExaWWM4OU1KU1RYVQ?oc=5"
+        "title": "신계용, 청와대 앞 1인 시위…경기권 지자체 '주택공급 반발' 확산 - 머니투데이",
+        "source": "머니투데이",
+        "date": "10-30 14:44",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1lMGgxUzBIamZfQmNRYWZPMm1zZ3Z4d1hEdWhZYmw5WFo2YURMTmNYelVEUmZMRWl4ZWdRWGxUUDZFTnNQLVZzcngxbldFZUJieDdwU2FZWmJoeE5IdVFQdUcyNFhWdnhGNEk0YWc3b2ZveWg0UmEtZGdNaS3SAXxBVV95cUxNZTBoMVMwSGpmX0JjUWFmTzJtc2d2eHdYRHVoWWJsOVhaNmFETE5jWHpVRFJmTEVpeGVnUVhsVFA2RU5zUC1Wc3J4MW5XRWVCYng3cFNhWVpiaHhOSHVRUHVHMjRYVnZ4RjRJNGFnN29mb3loNFJhLWRnTWkt?oc=5"
       }
     ],
     "반도체": [
       {
-        "title": "[만물상] ‘사우디 석유’ 제친 ‘K 반도체’",
+        "title": "인텔 28% 폭락‥미 반도체지수 7% 넘게 하락",
+        "source": "MBC 뉴스",
+        "date": "10-31 05:47",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1hM1l5cGxuNEt2UzJPSjNFcjRlOFBLMFE0TmtQUExYZ2RvQndwd0treXZNRnNwSXNFR2UtU2lqQTY3X1RUUkVsVkZncHlWRzNUNTlLRng3VEJLYVZTRHRIMHg1TFEzVkEzTDlCQVMwYkJlbVY50gF0QVVfeXFMTXVTT1VqQkROWW9NbU9FbjFDQTRtR1pLZkN3czRVZnFMYTB4YWZPbnl0ZHhhOEtTaExtMF9LeFdQZkx0MkZPRHpLR2xEaG81dVRfLW5TVXlzV1BOZ3prTV9rOHdJSUc5ZnU5QlFkc3BFMWYteFo?oc=5"
+      },
+      {
+        "title": "반도체 석·박사 대신 취업… 서울대 공대 대학원까지 미달",
         "source": "조선일보",
-        "date": "10-29 21:03",
-        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOclpJWXJSVnJDYmpuYzhVZ1B0Qm5pVlVzZE11YW9obzdLOWN0eWxsODJ6b3daRjNCb0FDYU8ydV80QV9fVEFtMXhyeER5RHpGMUdaT0NualhPTFFtNTg2VGQzQ2J5VEc0SlRCV0J4RmpZeDNLSjdoQks2UkwxTXY3VEw3ajQxSm8?oc=5"
+        "date": "10-31 00:47",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQ1N1andkZ0VJdTFwQlFfUVVmVk5MR0E1LWRVbjR5bkZFRlJKTlV2WGpRb19fRUpRVGN2VFoycXkySXhwZHRwMjdVSzBrWEEtNWM1X1MyX1dudzhlYmRJNFFOdzQxWjBzYVVWazFqMGVnX09JUm9vaHBtSE5oS2JRWF9EdmQwZ0pjcEtJQ3FXUTU?oc=5"
       },
       {
-        "title": "용인시, 반도체 양대 산단 공사 ‘교통대란’ 막는다…2만대 주차장·우회로 추진",
-        "source": "아시아경제",
-        "date": "10-30 07:12",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5jcUhvYjUzOTFINnZlMzBmSnFjLVFYNGNKdTNEcXFpSGJka2p2RlZvM0hkU3NjRnVvWVJUaDlDR0ZUaWVnYXVabXNTeTNGNzc1UWNoM1ZZTzV1Y3lQNjZHcw?oc=5"
+        "title": "인텔 주가 털리고 삼성전자 가전도 적자… 반도체 초호황 속 'IT 잔혹사'",
+        "source": "한국일보",
+        "date": "10-31 04:30",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBER01jSzlKQkstd21idTBNby1pMnIyZWNyQWRuMXFsdnRVa3Y5aHdkNklyQmZ0WDJNT1R6OW0xem5HaVlOR1RLZ1lEMmFfNXVlSENtcXo4Uk1vREYtbHVoZWx1dXlsUUk4Ukg0c0NtdE8zT2PSAXNBVV95cUxQREdNY0s5SkJLLXdtYnUwTW8taTJyMmVjckFkbjFxbHZ0VWt2OWh3ZDZJckJmdFgyTU9UejltMXpuR2lZTkdUS2dZRDJhXzV1ZUhDbXF6OFJNb0RGLWx1aGVsdXV5bFFJOFJINHNDbXRPM09j?oc=5"
       },
       {
-        "title": "삼성전자, 반도체 호황의 역설…DX는 원가 부담",
-        "source": "MTN 머니투데이방송",
-        "date": "10-30 06:01",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1OZXNRaEhkWnoza0xUWDVuQUowMXRsemxnWG00a3NZS0hiX2gwYlNwdmFVMlNuSkNiLWxSa3ZEa0EtLTN2YS1mNEJycmt6NjFrTERaamo0ekdHYkFUbXc0?oc=5"
+        "title": "\"11월 증시, 그래도 반도체? 전력기기 건설주?\"…증권사들이 꼽은 유망주는",
+        "source": "한국경제",
+        "date": "10-30 18:49",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE85VDZMZVlYOG1UMElQSEo4OEc5Vnh3cE9KZ2NvOV9XZkNtQWxmM1RlYzlUVWg4VkZmeHhUZ0N4cHBxaDJXYkwxUjRBcTM0LWFMNWRXVllQZ25WQQ?oc=5"
       },
       {
-        "title": "반도체 정밀 패터닝 차용한 '무음극 배터리' 계면 안정화 신기술 발표",
-        "source": "글로벌이코노믹",
-        "date": "10-30 06:05",
-        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNLWd6cTlhOGQzZmdZaU5tcXNlaWp5ckp5LVl0ZXNRYXpHYjBrTVlET29EdkFsNmZWVkxwdjR3NTJSVklsY25ILTFkRkVOSU9KMndTYU5rYXVjVjlJUWoyTDRCeHpyV2wyLWVQaFdnZmQwRmJRaWw4b2VwVTd2Y1lQeE9DTTdhN3ZK?oc=5"
+        "title": "[亞증시-종합] AI반도체 매도세에 대부분 하락…홍콩만 상승 |",
+        "source": "연합인포맥스",
+        "date": "10-31 01:39",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1oN09UR0tPblZQcHlIS05JT1pYbFJuVFVIdEZhd2RhdEE2V3ZvUHBFcV90LWtxSXhFQlRQTWdoeFpZSkJKQnZsTVhxdmh6OEhiUllnZmo1UjVnOHlDd1h0TXp2eWZ4VWlsa3poZ1g0NC1rLVI1?oc=5"
       },
       {
-        "title": "한국 콕 집은 연준...미 물가·AI 성패 가를 K-반도체",
-        "source": "YTN",
-        "date": "10-30 01:30",
-        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1HNFUxRTlWX1ZzbnFwLUtyLWRpSXluSnJaQ2ZrdnJETnd3MHZGR253RVljVFVveXVUOU54bWU4a0k5em92SHA0QjRqaXEzR2twMXlCNzNGSzRRTUJIZ3c?oc=5"
-      },
-      {
-        "title": "이상일 용인시장, 네덜란드 ASML 본사 방문…반도체 산업 협력 확대 논의",
-        "source": "에너지경제신문",
-        "date": "10-30 01:02",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HNzRueUwxVnZqUUJGODBtSW9kdmN6eERiZWZpUmE0bDZRcDlOa0JSRVhvblExX2JKNXFkLVJ1V2FzV2xGUGpEcWdIM2N3UFFLeDZOaXd6OFpBQk0?oc=5"
+        "title": "외국인은 건설·방산, 기관은 반도체…개인, 삼성전자 8197억 팔았다",
+        "source": "뉴스투데이",
+        "date": "10-31 06:55",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1xazh6NFI0TktGUDJtNHBUb05NZkZBZXRROEFKeHhaaFVMbnFSOGgtTFY4Z1dGNWNvNlRubTRDbk5lN2xfQTl6VS1CSWRLR2Y2N1VESnYwQmVuQU1ITnc?oc=5"
       }
     ],
     "AI": [
       {
-        "title": "AI 시대 한국의 미래, 공학에 묻는다…공학한림원 '10대 질문' 선정",
-        "source": "DongA Science",
-        "date": "10-30 07:00",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBoOW9kZGpib0gzMXdKUmVMekl5bHc2M1ZmYVF2YUVVdFR6SWl0aWhnTUlXV1MxMEJnYkZvU2JqY2YwVXFKSFBlSHNCMXlXR3hfRTI4cA?oc=5"
+        "title": "트럼프, '인공지능→슈퍼지능' 압박에 실리콘밸리도 용어 바꾸나",
+        "source": "매일경제 마켓",
+        "date": "10-31 06:39",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1yRklrU3dCeVlqVUk2VWx0LXI3Ull1czQxdUd1MDNYcElGaE93ZzU0dVhNdnA2SWVRWVB3QWZacW94bnFELU0zczNPVG5pR3VzV0E?oc=5"
       },
       {
-        "title": "한-아세안, 보건의료 AI 정책·현장 적용 협력 논의",
-        "source": "메디포뉴스",
-        "date": "10-30 05:09",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE53TlhWdUY3djNreFVFcWFidjVuUWxzbXN2VnQ3QzcydGdfU2NYXzFua0dERTJFMWY5VmlvLUJ3SmpZUTRlcTVtNkNJZ0VFQWdNcVg5YXN4QWRrSE95S3BMZm9oMlU?oc=5"
+        "title": "[IT 칼럼] AI와 로봇에게 예의를 갖춰야 하는 시대",
+        "source": "주간경향",
+        "date": "10-31 06:00",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQOEZ3WEtTNDNJWjhmVTFKRl90T29UQ1lYbjlGTDc1OXpvdlRyYmVhN2VNdmRiaHZ5WkpXRy1SV2dOaVNhaTBBd0s2TkRIYWwyd2JEN00wNVJ5QzR2bTlGejBwQ3NITzlKem53dVBKbUJPbW02aTJzNGk3NXZqRWpFWFprNEtGNFZ1eTY5V0stTnJQMTNhamJxaG9BQk5zVlgzS011dUpMdHBpRktjVklHSg?oc=5"
       },
       {
-        "title": "사장단 50명부터 AI 교육… 2030년엔 AI 자율 공장 만든다",
-        "source": "조선일보",
-        "date": "10-30 00:30",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZ1A4UWN5MHlCaTV5bWhOek1Wd3RrNkhxYkpidHNRNjFDR2w1UzVqbHg0dmV4ZXM1eUJaRTNhc3BqZGMwRWRJamhNR3hqM3dRWTFqZGxjMkNZal9oMWdRVkxud1QybkhvbnYxRGgzQmREZDB4bnVobHNpUVYxQmRQNUdKQVZLdk9ObTE0NjZ0dw?oc=5"
+        "title": "이진숙 의원, 원전 AI 안전규제 새 판 짠다…마지막 통제는 사람",
+        "source": "에너지안전신문",
+        "date": "10-31 05:46",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5qTWREMGhMY3lkcS05SFN0SHNhQVQ1ZWtINnhnRDlOdFZGaTBIV2dlUFhsZjhtbUg2X1FrcDdndTA4UWdocS1rNjAyX0JTLV9nX3gyVW85OWMwRDhBd2xtbjVOMmI?oc=5"
       },
       {
-        "title": "인공지능 시대에 인간 존엄과 노동·환경을 묻다…주교회의 공동 심포지엄",
-        "source": "뉴스1",
-        "date": "10-30 06:53",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9PNlVrTHRJMnJETXE3cnNPQ0czQS14SmxfMzd0dG05ekpPcHZNdXdZRG9HcFU4VEZuMkZGTTh4cXFHWkRDMzRVdFBYMzhoeXNEUi1sb3I2WUFHa3RnV2dV?oc=5"
+        "title": "한국-독일, 산업용 AI·반도체·로봇 협력 본격화…메르츠 총리, 첨단기술 동맹 강조",
+        "source": "인공지능신문",
+        "date": "10-30 14:37",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9EVXptQmNSVGpVbEVfdG12Vm1zRWNzQkpNeVBrYWxzeXRrbm5jSWZ2Q050MGVpcldRVFdsYTRhc000WHB5UV9xdTZnSmViTXEyZ3NqQ21GSWFLUUwzelprRWxUMWtWYjQ?oc=5"
       },
       {
-        "title": "4~5세 유아반, 300만원 캠프…불안감 파고드는 'AI 사교육'",
-        "source": "뉴시스",
-        "date": "10-30 06:04",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lQXpjSkItMHdhVUc4Y3VFamV5WXE0MGhjc3dtN1dydTBOd1NzLXVKM2tNMXBIYTktTGV4SHA2TFh4bkhrSWlybzY0MC13WVJKR0dybnBtcWpNSmFkdFRKY1BEeVBld1FmaEZtN3Rpc1N5NzJMZ05pUtIBeEFVX3lxTE1lQXpjSkItMHdhVUc4Y3VFamV5WXE0MGhjc3dtN1dydTBOd1NzLXVKM2tNMXBIYTktTGV4SHA2TFh4bkhrSWlybzY0MC13WVJKR0dybnBtcWpNSmFkdFRKY1BEeVBld1FmaEZtN3Rpc1N5NzJMZ05pUg?oc=5"
+        "title": "머스크·저커버그, AI 대신 '초지능' 사용…트럼프 영향?",
+        "source": "지디넷코리아",
+        "date": "10-30 22:23",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1wWnoydGZ4bWZsNXpVUjdxaU1SbTB3bnhaVXRGVFRGUE1YRkwwT0M4UlFNZ2JsZkJjajFyWmJWRVpMT25JM19xRTdYRmt1RmZQMVo1aXF3?oc=5"
       },
       {
-        "title": "[특집]한국승강기안전공단, 자체 인공지능 시스템 구축에 ‘AI 전략위’ 개최도",
-        "source": "경향신문",
-        "date": "10-29 19:54",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1jcjlDcHhuY1NOeGRWbDloaDJPOHc3b0NwaDhhYks2VjBKaHR4X3F3ZnNYcFRDNTRDb2dTRHZpb2tKSk5qY1dPQUZzU0Y4QmdUVEVjUTFqV3ZlRnVTREc00gFfQVVfeXFMTWNyOUNweG5jU054ZFZsOWhoMk84dzdvQ3BoOGFiSzZWMEpodHhfcXdmc1hwVEM1NENvZ1NEdmlva0pKTmpjV09BRnNTRjhCZ1RURWNRMWpXdmVGdVNERzQ?oc=5"
+        "title": "경남교육청, 인공지능(AI)·디지털 교육 현장의 고민에 전문가의 지혜를 더하다",
+        "source": "미디어투데이",
+        "date": "10-30 17:03",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE45WnJOUkg3VExQS0tWYnlyY2ROUFk4S3NYUXdNX3lrSjFmWm9aVE0tNEZOb3ZyMEtpX1E2cU9TZmpEalA5R0I3XzJn?oc=5"
       }
     ],
     "양자컴퓨터": [
       {
-        "title": "메가존클라우드·KISTI, 양자컴퓨팅·AI 융합 세미나 열어",
-        "source": "디지털경제뉴스",
-        "date": "10-29 20:35",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5QYk50SXNLZXFCaE5XOU1Xbzc5QmZhSDZ1UnI3RmNTdmlqeFJsX1RLMFl2Rk5nemJFcmJSOHhHaUFUVGxIQ2dTLWtzdjFNQ2dYT1B6VE1nRk8taTlyMC1kMUswVGxLaVB2Q2c?oc=5"
+        "title": "IQM, 완전한 54큐비트 프로세서 전반에서 얽힘 보여주며 클라우드 사용자에게 전체 칩 성능 제공",
+        "source": "https://www.koreasprint.com/",
+        "date": "10-31 02:34",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93a18wdWtCTG5mdGJ4d2VvN25xZDRMaTBUaXppa0tOWTU3bVVYYmxIZU1JaUVacHNaa0k0eGc2S2tQbHFacUJ5Z0Qxc0VNLWhEWWhFY01ESkpWc0tVbEctVG92WXRSaldkaDBsdDlR?oc=5"
       },
       {
-        "title": "이론상의 30,000-큐비트 양자 기계, 600만 개 노출된 비트코인 위협 경고 연구진",
-        "source": "CoinDesk",
-        "date": "10-29 22:55",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcmxxVUlNYUVnM2MxWVMtcF9WQUpkNGlFS1FBeHh6Y0F5YUN5aWsyeEt3ZlppZ09UUVpWcW9QNlNrb0p2SUJyMUNLZC1yWDc3bk5YcHM5Q0phNFltUVZSbW9Rd2taVGJ3SFE5YkF0RUVVRl9ZazNRU1N4YUVGZ2JTcjhGeWNLaXNUZXRQNFFtYlZsQ2xaVUlCTWs0dnNkWHdxdXdGT3ZwajY2d3FpeFBHZ1lTaV9fQjVKMm9R?oc=5"
+        "title": "Psi퀀텀, 양자컴퓨터 플랫폼에서 AI 데이터센터로…저손실 실리콘 포토닉스 활용",
+        "source": "사이언스모니터",
+        "date": "10-30 12:40",
+        "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQYjZSbTgwTUlFQU9oMXhaXzZHczdxQUdqXzBMaGNveVdfQkp6cHd4YnpYdnU0TUNtSW9PZG85WFVmR3k4QmhvX213dDQwUjJwdGZ5SHA4NHd2MDJ5VU1fcTRFWTM1S0RPaFZSTHZQbVAwV2VaZlZ3bjdDUTY5TEpoSGZFSXRUQ3UtYlAtajhQemRuRTdaamRBWVp3b0Ewd1Q5bnJJakkwX2xiMm5SYXFJaDlKZVd1eEQ0dHN3VVIzYk5wZ0RxZDd5dldsa21VZENGX2pZaVpvOHdnakFvR0x4Y1JrUk1GZkVQRnBmMnZsUlhudDdnRDlmdmlzZy15MW83V3BlWmd3THpnWlNXd25lZDZPQlV3RlNmc3NaSElNbDBKWlRIRE1tdUxnQ2V3VDVIblhOYzVsdU1ZZw?oc=5"
       },
       {
-        "title": "'큐비트'를 위해 설계된 인공 유기분자…'유기물 양자컴' 나올까",
-        "source": "DongA Science",
-        "date": "10-29 04:00",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA3OEVhcUpLa0IybjhhWGV1UUotSWlCaFlGRmk3U0g0T0FJdTljN1RqcmdFaF9XdVhFLXJpaG02eVlVLWI2bmd6Zkw4OEZYOFFZN0NYaQ?oc=5"
+        "title": "구글, 양자컴퓨터 핵심 오류 40분의 1로 줄였다!",
+        "source": "데일리카",
+        "date": "10-30 09:48",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1taDlrTndhNmw4MS1rRXBYSUpJdmxTOGlkUXgwbkpBUk00MFhDMHJGMTFMSm5Tdm9pSmFETXIyV3hVZVcwZEJMZGlMNmplVmNSNHFFN1FibTNXZEM0Vl9JNGRsam5EQW9qeWFuUTMzbjE2aVZHWlE?oc=5"
       },
       {
-        "title": "비트코인 반등… FOMC·달러 패권·양자컴퓨터가 변수",
-        "source": "뉴스비전e",
-        "date": "10-29 22:53",
-        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE03RXVIOUtfamlkc2o2a3dvWUE1MmRXTnFJejhaRU95QjdKVUhBMmoxaHFEbE5lWV9STllGcUpiMFNUMkcybGxMQ3AtODEwcXJqSklvbFRWelZkSmpjeWdmVVpseXVOdw?oc=5"
+        "title": "QAI, 정현석 서울대 하이브리드 양자컴퓨팅센터장 자문위원 위촉",
+        "source": "양자신문",
+        "date": "10-30 12:01",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1XbW11Z0VUc21keFFkclh5Z1J4MjBkYm41amI0azR5NldGVU5EWVpLcFRzbXVKcmtSZENNNHJUM1M5UFd4Mno2eXp6ZzlwTkNrR2dkQ0Ewdjl0M1ZONGJiU2lEUm5tS0NRTTY2dV9SOA?oc=5"
       },
       {
-        "title": "인텔, 클래시크 인수 계기 \"양자시장 HW→SW로 전환될까\"",
-        "source": "지디넷코리아",
-        "date": "10-29 16:28",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IcUtFWHN2MmtrM2Q3NFQ4bTNBUlZVc1VyYU9tek56RkZiVGhWeHJRM1BHeWE1UTVQUlUxLXlnZzdubFhQdFZfdWlRQ0JVZUo5d2h2bENB?oc=5"
+        "title": "유명 투자자 \"양자컴퓨터, 비트코인(BTC) 투자자 15% 막는다\"",
+        "source": "코인리더스",
+        "date": "10-30 09:55",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE81blE1aUdWSkVTU2oxLUZKY1dIU1ZTenFNR0NmWkIwemFzMG5td1lWZjBvYXhmazIyekR1UTVTa1Jvanl2MDluRzRB?oc=5"
       },
       {
-        "title": "메가존클라우드·KISTI, 양자컴퓨팅·AI 융합 산업 활용방안 모색",
-        "source": "데이터뉴스",
-        "date": "10-29 13:49",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9aSV9uMHdSN24yaVdPU2NqaS1ZS2h2YmF1bldLdW1nbmdCbVN5dlZhRmxxZWE0dVVPQWFfeXlEYXJUTE53TERsNEVKSjdUb2FmRzhzRHpLemNLVWdRSS00?oc=5"
+        "title": "“국가 양자·HPC 인프라 구축 본격화…다음 과제는 산업 활용”",
+        "source": "IT조선",
+        "date": "10-29 08:02",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE84OWZraWtjQWpVZ1FhS2w3V1VEUkFjSTI0MWFzcTdIZW5jMWlrbzdlc2hXVHFLcUViYUswTEh0d09vWUpuQVl0VENBaTFrd0doV295anBER1dHVEpWakstYUJzVFRKeXpCN3ZNNS1SbDNabUJp0gF0QVVfeXFMTzg5Zmtpa2NBalVnUWFLbDdXVURSQWNJMjQxYXNxN0hlbmMxaWtvN2VzaFdUcUtxRWJhSzBMSHR3T29ZSm5BWXRUQ0FpMWt3R2hXb3lqcERHV0dUSlZqSy1hQnNUVEp5ekI3dk01LVJsM1ptQmk?oc=5"
       }
     ],
     "청약": [
       {
-        "title": "[건설명가] 청약마감 후 문의 줄이어, 참여의향서 접수",
-        "source": "중앙일보",
-        "date": "10-30 05:31",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1tYnFqVlVuVVdrb3ZIWDdBX2tacTRQOG9tNHprN1BpRTZ2YUxKeEVBUnBFa2JQb1pTMkxQb3pNMmtYaXlZdnJNYnZ1RVVWTGpxY3NuU3BB?oc=5"
+        "title": "11월 전국 분양 봇물 속 서울은 '1369가구'…귀한 청약 단지 어디? - 머니투데이",
+        "source": "머니투데이",
+        "date": "10-31 06:00",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB1aGZ6YUVPbVFabXF1WXUxTEVPaDRwSHZsclh2SnZZY0FoNi0ydVFOZkZvYUsxZzl3VHEzSFZiOFlkOEhNeURMS05lQ2xsT2ZtUUhzZ1dRRzJrc0xJUUtMVGprVHhYSTZmOWNJRV91TdIBb0FVX3lxTFB1aGZ6YUVPbVFabXF1WXUxTEVPaDRwSHZsclh2SnZZY0FoNi0ydVFOZkZvYUsxZzl3VHEzSFZiOFlkOEhNeURMS05lQ2xsT2ZtUUhzZ1dRRzJrc0xJUUtMVGprVHhYSTZmOWNJRV91TQ?oc=5"
       },
       {
-        "title": "‘20억 로또’ 디에이치 반포124 출격…청약 성패는 ‘현금 동원력’",
-        "source": "매일경제",
-        "date": "10-29 11:17",
-        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5PbTRWcDB0UzkzQzFneV9hdjlHSEJUb0lvT1ZBekMxYWhVSEdpUVFTbnVqYlJ0aG14ZGJsc25ncXVKU3E2S2FZLWFvVHV3MFIxaVU5Y3Ixai0?oc=5"
-      },
-      {
-        "title": "경기도, ‘전국 최초’ 광교 지분적립형 분양주택 240호 공급…11월 9일부터 청약",
-        "source": "경기도뉴스포털",
-        "date": "10-30 07:00",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNekgwQXRtNTRrYWZLTGp4QVVxeXdXVDlDV0lKWjFIT01YaEVyaW1zVnlYbjBNN1pVRmVTWlNQeWNabWxHd1ZXb0VuVWFERGcyWklwZFgzcmdyekE2ZmVaaEJCZmtQclhid0ZQRkRzWUZaNFBqSkZfSTFxZGtoZExGWDVvQ28?oc=5"
-      },
-      {
-        "title": "청약 미달에도 분양가 못 낮춘다…건설사, 원가 상승의 덫",
-        "source": "핀포인트뉴스",
-        "date": "10-30 00:31",
-        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1Qd2hrVV84YWdQUmYwX3hVei10TzJYNS1RalY3ZGdUdEF6bERyZlRINldtMm05Y3U0TjAxcVJMaEV4YzNya1lKSUxtQVpHbVJGc1ZvY2pKUk43akRTSUphQUcyaVVtRVFGaWxGRkp4VW9Xbjhza1lJ0gF3QVVfeXFMTVB3aGtVXzhhZ1BSZjBfeFV6LXRPMlg1LVFqVjdkZ1R0QXpsRHJmVEg2V20ybTljdTROMDFxUkxoRXhjM3JrWUpJTG1BWkdtUkZzVm9jakpSTjdqRFNJSmFBRzJpVW1FUUZpbEZGSnhVb1duOHNrWUk?oc=5"
-      },
-      {
-        "title": "'대어' 앤트로픽 IPO에 국내증권사 줄줄이 불참…공모주 청약 난망",
+        "title": "[부동산캘린더] 내주 고덕강일3단지 등 전국 4천928가구 청약 접수",
         "source": "연합뉴스",
-        "date": "10-29 16:22",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1URmY5SEFtUjdYdDJZVmkyVENRU2M0RWRRQ0poSUNQcjQ3N0FCdVRTSDdibjItNVBzdktWWENfRkRoSS05SGRzRlhBTjlUbVB0QzJET09YenFwc1nSAWBBVV95cUxNa1U3UlRGOG5yZG1UYmpTUEhBZ0RWdkRON1pFMC05azlrRmZTekEza19PaWlYeWd6UmRWWlh1N2VjSnBRVUx6U3ZUN2gxcGw1VlhkYVdRV3ZXd2VLSzFwNWk?oc=5"
+        "date": "10-31 07:01",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xLWRxeHpSWWh0YmpXUnRiRFdkZlRTM2pmZDFGWm43U0o1cnY3TVVKN0lLbERuOVluUGpLd3ctR1Zna0ZXM2tqMEhlcE4xRks1c2JRSFNJcHlpMW8?oc=5"
       },
       {
-        "title": "[공모주 청약] 스페이스X 전례에 AI 고평가 논란까지…국내 증권사, 앤트로픽 IPO 외면",
-        "source": "CBC뉴스",
-        "date": "10-30 00:00",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8yUHNrYllBczNUeG05d19hekFkSnYwMU55el9BSmpoWjgtWmtKX1hYZGxDaWFoWlJqbXVjb0dMZFhKVEJRTHZma1l3Vm1pcDRGcnEwNXVWdE5ZWGZQUEZIa1J6WmE5NUk1?oc=5"
+        "title": "다문화 가족은 어린이집·주택청약 우선권… 주담대 이자도 깎아줘",
+        "source": "조선일보",
+        "date": "10-31 00:52",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRHAyZjNyYWdPV2hraDFRbFU2aXBfNFJMcTBfTGFPV3pVX2FEY2lMX1FUelNiaTB3a0JVc3BnNTBKdnprYXBzQkd6T3pFZm8waVYweVBsUXRaZWh4cUIzbVUyMWdOMG5yVzJiSHpTcFZrMFdSVEt0MzMwT0g4anVkZFh2TkNSTDFxZkNfN2NHbm4?oc=5"
+      },
+      {
+        "title": "[분양캘린더] 서울서 715가구 풀린다···11월 첫 주 청약시장 '고덕강일3단지' 공급",
+        "source": "스마트비즈",
+        "date": "10-31 05:00",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5kc3lNSF9XUzR6TjQ1ekNKa1NfeFFwaHAzSGQ5TlBtcE1KQ054VlRzUVl0aXlmM3I5MFJNVGFhcFNySi1yX0RPT3lLN012RnRveWRPdldwS0lJZ0JVUmRtc044WHNISGNTVXE0WQ?oc=5"
+      },
+      {
+        "title": "청주 아파트 청약 극명한 희비…호황 속 불경기 계속",
+        "source": "노컷뉴스",
+        "date": "10-30 18:49",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9pY2RBNVNidUl6MzJmemNiOHIxQnVBcXg0X2Zrc3FBNDRkYnF4YXpxbkJXY3loQ01OVy1Hdl9HOTlLaVdwWVdCN1ByeFFjSWRHQlE?oc=5"
+      },
+      {
+        "title": "하이엔드 아파트 청약 경쟁률 일반 단지의 3.8배…상품성이 흥행 갈랐다",
+        "source": "아시아타임즈",
+        "date": "10-31 00:00",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1nOFZOWmRtbWVsTHdpNS1KX25zRGFuYXRQenpPc2dFOXRGeWZQNWlCeHd4WGVUY2pNcmNDMUt5elE2VGJaNTBYYWJtZ0xIakFPV2U1TkdRVkRETGd1c0E?oc=5"
       }
     ],
     "삼성전자": [
       {
-        "title": "삼전 330% 폭등 맞힌 男…“다음엔 이 종목 엄청나게 뛸 것”",
-        "source": "미주중앙일보",
-        "date": "10-30 05:00",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Sc2VQT20zMGFNcGxQa1N6YWlfWmtyM0N0LWRtVVhXWkZiZnV3WG9yRlVpREVUcWJ5YnZpOThGMmlEMFdKT2dXb1d2MGxsd3BqUHlVNVh4cWFFdl9FQ1o3Z1pR?oc=5"
+        "title": "‘분기영익 100조 시대’ 삼성전자, 주당 4601원 배당한다",
+        "source": "문화일보",
+        "date": "10-30 19:27",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1pUndwR1pQdW5fdjlsbENHcktsMDladGFWMWo0VG1rbDFWV0NIVE9XWjFjWFo4b3VBYjNKcklXQVpDTzJYUXYybUc2M1VjTjFa?oc=5"
       },
       {
-        "title": "107조 벌고도 5% 넘게 빠졌다…삼성전자 ’역대 최대 실적’에 주가가 등 돌린 이유",
-        "source": "Investing.com 한국어",
-        "date": "10-29 13:54",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1nN1UtVEY2MkZSb01fUHNwWlVOR3hSblBlY3V3LS1qRzZzYVY2OFRhb3dPbnNZbEktbjBaSFBaYnd0UWNXbnpNd1VCLXN5bW1QV3lZYmhoTF9lcnJZRUFnakRzR2t5TmJpQnM3Nk9FbG0?oc=5"
+        "title": "삼성전자, 中 TCL CSOT 지분 1.3조에 인수",
+        "source": "IT조선",
+        "date": "10-30 17:43",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5GUGxXa0dCTGRjYXAzMDVqTTNyaHY4aGdhTjFaOVJESlRNUVFkb1VNaVFGdTJONEEyNHJuUzdfY0JUa0dxbG1odWdtcmpvelB0TVdJYi1ybjVCN1JWcERFUkxNWGxHNzNYckt3dUVjdlTSAXRBVV95cUxNUGhxd0tTZHhRTVZqMVhnQVpzc1IzZmFXdWpZemtwejhBazMwY21CSnpDYlBMcC1semtudGhEMWFlVklaNTgtNGhnMXNtQ2lKZHVUTlJvdXUza3QtSHo4bjU2MVVjQ3pDaDZOQVBjNEdZZU9kVw?oc=5"
       },
       {
-        "title": "삼성전자 역대급 잭팟에도 주가 흘러내렸다…개미들 또 비명",
-        "source": "한국경제",
-        "date": "10-29 16:40",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Qdk1PXzRuOUVPVTM3UUdSM1R1R2M4ZEQ0eEFtWkRIOXFBYndYbVhILTJ3LWZmSFduWlJQOC1kRC1iZmFWTXBHa2huYWI4R0ktLU9nOEkyTEowUQ?oc=5"
+        "title": "빅테크 AI 가속기 주문 끌어안은 삼성전자…파운드리 흑자 전환 채비",
+        "source": "글로벌이코노믹",
+        "date": "10-31 06:19",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdkN2NnpPMHQ1ekxydUg1SDVzS2VFbWc0YTBMNnV6eU9NbHBmMEQ4UURyWkx0aUpsQ0J5Z2NFNHZEQU9Tay03eFZZejBqWjZMN0N2V1FBVWFGWVhjUVM3UnY1MmxkSUpFd1A4bFc5NXg2dlNWM1FyUlllUTZYYlo2Mm5PN21hQUdx?oc=5"
       },
       {
-        "title": "107조 벌고도 주가 4% 급락…삼성전자에 무슨 일이?",
-        "source": "주간조선",
-        "date": "10-29 23:57",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1EWHFUSV9wa0hYQVBnTERhS2ZJR0k4dkJ2SjNqa2swLU5TeGhiTnJHNG1ReVdEa0hoTzdGR2xRbVBMWVNRRVZuWFM5aWZ6bGZITjRXajA4V1hWSHNaYWQ1X0dxM1lYcW4zTS05Vlh30gFuQVVfeXFMTURYcVRJX3BrSFhBUGdMRGFLZklHSTh2QnZKM2prazAtTlN4aGJOckc0bVF5V0RrSGhPN0ZHbFFtUExZU1FFVm5YUzlpZnpsZkhONFdqMDhXWFZIc1phZDVfR3EzWVhxbjNNLTlWWHc?oc=5"
+        "title": "삼성전자, 삼성D 보유 중 CSOT 지분 1.3조원에 취득",
+        "source": "뉴스토마토",
+        "date": "10-30 20:19",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBnVUNCM0Y4VXdPa0Zsak9vNVgtMjh0T2ZUZmZzUy1ZM0xEVXBldWZsNGR1Z1pCZzg0Sm1IcHJ2X0lXbVpNSmRpdjRIc3JNV2tjMXJOVHpvZk1sUXhzR2pjQQ?oc=5"
       },
       {
-        "title": "삼성전자, 주주환원 새 카드 없었다…구체적 실행안 내년 1월로",
+        "title": "외국인은 건설·방산, 기관은 반도체…개인, 삼성전자 8197억 팔았다",
+        "source": "뉴스투데이",
+        "date": "10-31 06:55",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1xazh6NFI0TktGUDJtNHBUb05NZkZBZXRROEFKeHhaaFVMbnFSOGgtTFY4Z1dGNWNvNlRubTRDbk5lN2xfQTl6VS1CSWRLR2Y2N1VESnYwQmVuQU1ITnc?oc=5"
+      },
+      {
+        "title": "삼성전자, 삼성디플의 中 TCL CSOT 지분 전량 취득",
         "source": "연합인포맥스",
-        "date": "10-29 10:47",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE12R2hjMzdkbXYxN0lSOGF3OV9qWVVMOUJEYjZHdXBZNEhKN3o3S1FKZnh4ejhHMzF0ZzFBbU5ybmhiYlE4TVg3SWktUUtxV2hIQ0t5TnhxMkRib1pIRFFTMnNJSXozeWs3OGZPbmZsS0o?oc=5"
-      },
-      {
-        "title": "삼성전자 \"올해 최대 75조원 추가 주주환원…총 110조원\"(종합)",
-        "source": "연합뉴스",
-        "date": "10-29 11:52",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBJTDJMekRRZnN6ZFQ1eC1TS3VZMkFMNHlEWmpzVV9qNHpsdU9kV0ROMVJXakpaTTFneWFmZjM3dkktcWFLUDZFU2puNjhzYmRTRVJKYk14UGxKVWfSAWBBVV95cUxOU3M0U3BwaEJGR0YtaGdaNlJHbDZHRjYyTTQxdWlCdHhCZmdVeWU4ZWVKanp4b2xVaTJ4ZmVmZUtfVzlRd0Rxa3J1ZEJtTDR1SkFGNURra2VJdEJ6UlNCa18?oc=5"
+        "date": "10-30 17:00",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE42M0RRNTgwM3BaZDFHQmZVYXRoOXg4cWQzYUhEYjRCZkxmUWhLeWRZdjhzWENMdXpia09oZHJZYlVqd2R5TjRYTFpZckZ0a2htY1NIODBDRHFQenF4bGpaalpQeEdrX1V0ZU5obmh3b04?oc=5"
       }
     ]
   }
