@@ -1,270 +1,184 @@
 {
-  "updated": "2026-11-21 12:04",
+  "updated": "2026-11-22 11:01",
   "briefing": [
     {
-      "title": "[ 부동산 시장과 정책 12 ] 2026년 말의 시장과 정책을 읽다.",
-      "summary": "[부동산 정책] 관련 주요 기사",
-      "source": "한국도시환경헤럴드",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5XQzJhSjZOSzVQRUFyeGhhaFRHeHNYUGszWUEzRnV1RUxxMWtTU012aW95ZFIxalI5SWtxWXdIaFc3Qjk0S0swdEtlcWlRREVUbzg5TUVBR0tLLXRBWlVTLTAxLWU3MkJ1dXZYWmxqSG_SAXBBVV95cUxOV0MyYUo2Tks1UEVBcnhoYWhUR3hzWFBrM1lBM0Z1dUVMcTFrU1NNdmlveWRSMWpSOUlrcVl3SGhXN0I5NEtLMHRLZXFpUURFVG84OU1FQUdLSy10QVpVUy0wMS1lNzJCdXV2WFpsakhv?oc=5"
-    },
-    {
-      "title": "나스닥 '준공황', 반도체지수 10% 폭락 … 韓 증시 '중대 위기'",
+      "title": "4년 만에 대중국 무역수지 흑자의 역설...반도체 빼면 적자폭 확대",
       "summary": "[반도체] 관련 주요 기사",
-      "source": "뉴데일리",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1JakhwY0ItSUU4cnR1c1JyLWJZLTZILXE5em9xUXczcTBTMU92ZmVvV3JqUGxPT2ROT3h5TXlyMW0xSWlLaFRVaWJmaWJ1akpzbmJ5cGpEM0pGVW5SWkJBOXVOeml2amN1NmJiZF9NWk4zM2ZuSUgwNzVkONIBgAFBVV95cUxObDNpcldTclJNMG41WHRmZHBjbUp1QTk0VGxqMjFRbjRNc0tjT01kN3E4emhjYVNhMDEzSHhoN3ZNMzlRc0J4bm5mczRfNDhIcjV6bjNKeC1xNzY3MFJBekFOZGkyOUt6dXFaVVMwcGhxaFU3SXpjV0RtV2hKZFFkUQ?oc=5"
+      "source": "한겨레",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBtRXNMT0NqUzNkbFllb0dqTDZnRGttM180cXlpXzY2YTkyTG9sRGZRQmpIOXlZVnpmSXE3SFJEajdvNmZGcGRNOVpVVzRuZk9BTGdjQ3ZVRS14OHhWLTRaQzVXQklIRXdDNTVFdTc4MnZiZw?oc=5"
     },
     {
-      "title": "인천시, 지역 13개 대학과 ‘글로벌 인공지능(AI) 허브’유치 전략 모색",
+      "title": "동대문구시설관리공단, 서울시립대학교 인공지능학과와 MOU 체결",
       "summary": "[AI] 관련 주요 기사",
-      "source": "인천광역시",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQM3ZWak5WWXh4Q2dsQjBlcC15V1N2RjA1eVpqc25ZZFdsWVRtMVNoMmJTRWZQV0tQbVZqQkhacnNDY1hYUVZYcDUyU0IwWFVIQ2VlRS0wcGxXREtyU1A0d2xCQTNhV1JvSGx5ckxaRzJlYWlmTFF5VmM2Yk5VZHExY2liaw?oc=5"
+      "source": "산경일보",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBfVkdIMFlUZFZfRVRpYlVaZTMySmd3UV9fMkZXbVZiU3ZmTk4xLUk4Sl8zeXRueE9Ia2lwekRxR0hlWko3Rm9VSy1rWWFONThwa0dfeGwzOTdNeGxnemYxZ09TQ1pJcHRPWG5ZSVRFelY?oc=5"
     },
     {
-      "title": "양자컴퓨터 공격도 막을 수 있게…양자내성암호에 주목하는 금융권",
-      "summary": "[양자컴퓨터] 관련 주요 기사",
-      "source": "이데일리",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNQmh6aXptenBRS0VaeU1CT3NVZjNSNTZSQkRQRDlkZXMwZHFIQl9qam9QQnI3dkpHU1hIcDJfUG1lTnBYYjlmN2l0Q1Q5MmJMcFlSWjh2WWUyZFZtaUNjVm9LMEtFVWdxUDZrbURnSVVtTnhILUJxWFctaGtkUnB3SQ?oc=5"
-    },
-    {
-      "title": "[주간분양] 이주 '중화역 라온프라이빗 센트로' 순위 내 청약 마감",
+      "title": "“더 작은집 없나요?”…분양가 치솟자 서울 청약신청 80% ‘소형평수’",
       "summary": "[청약] 관련 주요 기사",
-      "source": "신아일보",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBvOS02YWRBb0gyTGxHWWY5dXZzQjhZcTVaTnoxSERmRXBlZkF5bUVmbVhCVGZDSEtTbHJ3dnI0Rzh6elc0akxHcUJfWGZFMjJsQnRDU0tXUGl6THRtNlR0WmlBcHVSdU5Lem9FREdLX1E?oc=5"
+      "source": "매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1KLXEyTmVJeUdFWkFyaW9rX0RQZGRSYXV1a1hKbFJ4TGtnMmJILTJoVmUwS2dDQXh1NXJqdFhfbHU4TkdVVndqUzNfbDJZMkxteXN2RHEtM18?oc=5"
     },
     {
-      "title": "삼성전자가 디자인을 사랑의 표현이라 부르는 이유",
+      "title": "\"삼성전자 700조 저평가, 손절 말고 버티세요\"…재무제표 뜯어보니[부꾸미] - 머니투데이",
       "summary": "[삼성전자] 관련 주요 기사",
-      "source": "보그 코리아 (Vogue Korea)",
-      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPVFVXdkwzeEFNVTR1ZndXY2c1VWVkMFc2clJYNWhUdUtoYW5KT2RUcVNXSUJEZkZmdmNZbDhSNk9ub3dPVWczTXpSc1dITWNxMU92aWlOcFVlejJrTUczMjhhSms4S3psSm5qNHJvS0kxbk5WbmhpS25fbmNfa2RJSk5VNUI0WFNWck5MZlV4dVljSkdDdlZrWHg5cXRwSGFLZW96elBFT2dxQ0UxZWcyOUVwLWhaWl9CM096STZDOUpWTnVhRkF3Z3RvRTdiOV9QSEFrNjVJcW8xSGdCdlpWWHhNWXM1bzJRRTRPVU9MZTU2ejZiUk9NRmR5NE8xU1B5amUxSVNQR1lTRm9IV20zaWM0bHpFRUtZdDJ3TktoZEtWQ25mdGhBS1VfejZTVlF2X1VwLWszZlBwdjNQd1M2TC1WU1VYbXgxZkp0bzBtYw?oc=5"
+      "source": "머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9pRkMzckl3eFF6Q3dvZEpsMUF3SnBMY0VuM08wR25IdFlIUVJJNV9jOUFSckVGbUdWck52QmZ2cER6SWZZblozbkhhNkNFc1ExTDFxOVlJYzY5ZEQ0X2Rpcmltenhta2t00gFuQVVfeXFMUFpSSDdnYlpoZWNObVJTdkVCYUVsSS1NXy1GZDUzUl9iV1BmRTJqOUFuejBWUkw0a01yeEo0SlYzT0pWaWVlcThWRWF4dVlRNlFrUHdUUkZjeVlaeFpxVDNUanpHTDdmbHZWMzJwUkE?oc=5"
     }
   ],
   "topics": {
-    "부동산 정책": [
-      {
-        "title": "[ 부동산 시장과 정책 12 ] 2026년 말의 시장과 정책을 읽다.",
-        "source": "한국도시환경헤럴드",
-        "date": "11-20 20:58",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5XQzJhSjZOSzVQRUFyeGhhaFRHeHNYUGszWUEzRnV1RUxxMWtTU012aW95ZFIxalI5SWtxWXdIaFc3Qjk0S0swdEtlcWlRREVUbzg5TUVBR0tLLXRBWlVTLTAxLWU3MkJ1dXZYWmxqSG_SAXBBVV95cUxOV0MyYUo2Tks1UEVBcnhoYWhUR3hzWFBrM1lBM0Z1dUVMcTFrU1NNdmlveWRSMWpSOUlrcVl3SGhXN0I5NEtLMHRLZXFpUURFVG84OU1FQUdLSy10QVpVUy0wMS1lNzJCdXV2WFpsakhv?oc=5"
-      },
-      {
-        "title": "[이재명 부동산정책 분석] ③수도권 집중 해소, 성공할 것인가",
-        "source": "자주시보",
-        "date": "11-20 11:14",
-        "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBqa25PeEc1ZGZYcVNwYUhDelQxTDR3alUwUERwYmVDRDVPT3c5YXVYbWZjdlJKUHlmMXZxekZyWXA0RHM?oc=5"
-      },
-      {
-        "title": "최경환 \"시장 이기는 정부 없다!\" 李 부동산·증시 정책 작심 비판 / 최경환 前 경제부총리 [굿모닝 대한민국]",
-        "source": "펜앤마이크",
-        "date": "11-20 16:36",
-        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YRmNOT2lHMm1ieE1WLTZtMVRYQUFSY3MtS1FYRmRMTkpVT0pRbmVrUHFuUklYeC00V1BZNWpRSFl2YWdiMzlsNEtJUnNORFl2TTA5cW44Z21tOVBHeDFSeFNqVGxTNVJGd2VN0gFvQVVfeXFMT0pPN0hZUnN3eVZoR3VDQmZzTE5ldEMtWlYzUGV2VHBCQ25sN1JUQkdzVUt2dndZU0VjOE5wcFl5MFBpQTFZWTJJMU5GZ2NWdmNFQm4tN0pYWXdhYVhzV1JCYS1oN2Z1QlZFcFRuMEIw?oc=5"
-      },
-      {
-        "title": "여성세무사회, '부동산세제 핵심포인트·절세전략' 전문가특강 성료",
-        "source": "한국세정신문",
-        "date": "11-19 17:11",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0zVmZCeTdTYWxNdXhXWHdRNHdvNTdKUjYyYm1iQUJFdW51MFJLMFVwbG9ZdS1iVmZqNW55bU42cHVvdlZudmxWcEppa2lRVGdFdmluaHlRaE1fbUVDeHlXbmFyY0g?oc=5"
-      },
-      {
-        "title": "李대통령 지지율 40%…민주 36%·국힘 28%로 오차밖 與우세[한국갤럽](종합)",
-        "source": "연합뉴스",
-        "date": "11-20 11:06",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1zR055ODdSZmEzbDR5WXFFN1lJMXZMZ2lQUmlDdGkyb2w4UTlZX1kwemE0LURvSC16NnM0cXpWdWlRZlA5cWwwQlFtRnRqYkNLQ2V1ekQ4bVZsdC1RbXBTRNIBYEFVX3lxTE1zR055ODdSZmEzbDR5WXFFN1lJMXZMZ2lQUmlDdGkyb2w4UTlZX1kwemE0LURvSC16NnM0cXpWdWlRZlA5cWwwQlFtRnRqYkNLQ2V1ekQ4bVZsdC1RbXBTRA?oc=5"
-      },
-      {
-        "title": "국민의힘 \"서울 집값 93주 연속 상승에 경기 남부까지 폭등…반시장 기조 재검토해야\"",
-        "source": "프리진경제",
-        "date": "11-20 14:06",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1yemhRVWVlN1NtSEl4LW0tVWwtTmpQM1pETy1JN29SYmR3MGN3THp5ZnlVT2F2MmQxX1oyYnYwUm9keU1DUXNGTEVXdlYtQWZHdklOMEJDcHE2aFJyYllxMHFnOFB2OXJHeWJDMg?oc=5"
-      }
-    ],
+    "부동산 정책": [],
     "반도체": [
       {
-        "title": "나스닥 '준공황', 반도체지수 10% 폭락 … 韓 증시 '중대 위기'",
-        "source": "뉴데일리",
-        "date": "11-21 05:34",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1JakhwY0ItSUU4cnR1c1JyLWJZLTZILXE5em9xUXczcTBTMU92ZmVvV3JqUGxPT2ROT3h5TXlyMW0xSWlLaFRVaWJmaWJ1akpzbmJ5cGpEM0pGVW5SWkJBOXVOeml2amN1NmJiZF9NWk4zM2ZuSUgwNzVkONIBgAFBVV95cUxObDNpcldTclJNMG41WHRmZHBjbUp1QTk0VGxqMjFRbjRNc0tjT01kN3E4emhjYVNhMDEzSHhoN3ZNMzlRc0J4bm5mczRfNDhIcjV6bjNKeC1xNzY3MFJBekFOZGkyOUt6dXFaVVMwcGhxaFU3SXpjV0RtV2hKZFFkUQ?oc=5"
+        "title": "4년 만에 대중국 무역수지 흑자의 역설...반도체 빼면 적자폭 확대",
+        "source": "한겨레",
+        "date": "11-22 08:43",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBtRXNMT0NqUzNkbFllb0dqTDZnRGttM180cXlpXzY2YTkyTG9sRGZRQmpIOXlZVnpmSXE3SFJEajdvNmZGcGRNOVpVVzRuZk9BTGdjQ3ZVRS14OHhWLTRaQzVXQklIRXdDNTVFdTc4MnZiZw?oc=5"
       },
       {
-        "title": "반도체가 이끈 수출...다른 성장 엔진은?",
-        "source": "YTN",
-        "date": "11-21 05:25",
-        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBwRDVOb1dPYk9mRDlfSmpmeDVpb0FEVkJacV91OTZHWG80bUZrYVBYdVh1R1dOYzBfd3UzaFg3cHpTMzZRTEdINXY5b1ZMcHdEX3Y0MDJWWm1PNGhnLTVYV0J6UzEtSFFFS1d6a0hSZw?oc=5"
-      },
-      {
-        "title": "반도체 호황에도 내수 파급은 제한적…“시차 두고 커질 수도”",
-        "source": "경향신문",
-        "date": "11-21 09:33",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5DUjlxQ2tFeDAtTE01MC1RMk9wWWkzOE5qU1MzYTBxZ2VpUDMyUVhOTUxucUJmYWJ2VkdDYzd0NXY2NlRUY3BpZzBlUE1XUkQyVndmSncwcTkwQdIBX0FVX3lxTFBJV1NyZUFTbkdFbjg5TEV0dlIzTlJqZXg3SnFxMnBtVU8ybG9rM2k4S0UtQ0ZvTTl0cVczenFKdVpOZm9lNEZ4aWdLelJ5Z0p0blV1ek5PMlFnVHRBWmdn?oc=5"
-      },
-      {
-        "title": "\"반도체 호황에도 파급 미미…10억원당 취업유발 2.4명\"",
+        "title": "'수출 1조달러' 한국, 세계 4위 전망…반도체 빼면 세계 8위",
         "source": "연합뉴스",
-        "date": "11-21 09:00",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE82bW1ySjE1Z0MxajE5VnktOFJnSDQtMzJJaDltUE92cHlINWMyeVZfSk5na0t2OHBGaVl2LUMzTUJkYkVvSndEM0N6UnM1bmh3cnlkUGpQTkU2NlhjWVZLatIBYEFVX3lxTE82bW1ySjE1Z0MxajE5VnktOFJnSDQtMzJJaDltUE92cHlINWMyeVZfSk5na0t2OHBGaVl2LUMzTUJkYkVvSndEM0N6UnM1bmh3cnlkUGpQTkU2NlhjWVZLag?oc=5"
+        "date": "11-22 06:15",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5XbWphUnlpM0h1eV9CQjlBMzBsaHA3cE5IWmFyalBtaVh2cjVJTDhlRV9oQlhzbDJkenBwVjlnSF91YXZQejZaTFpKWEYtcmhRRnkxY1puTWlFVEE?oc=5"
       },
       {
-        "title": "\"반도체 초활황에도 고용파급 제한적…10억원당 2.4명 취업\"",
-        "source": "국제신문",
-        "date": "11-21 10:35",
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOdGJGX0FvRlQydG00amQ4OVNsbEs1QWM2WUw2M0I0aEppUlgzbnB4VGttSWkxb1ZTbm1NdEFZZTdmUEgtN3VJRlhtLWdPajI3M3pFNzFwQ3dkRUZIQlNacHN0T1ZpazBuOERGZzNIVEFIUTE3MnBWSFVFdVRjV21EeUxlb0Z6UFRXbVdLR3h4b3JfN19GalI3bA?oc=5"
+        "title": "‘세계 4위 수출국’ 임박한 한국, 반도체 빼면 8위",
+        "source": "Chosunbiz",
+        "date": "11-22 09:49",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcDRoWExhN2lIRHR5MEF5ZVpVS0JkbXRfVXFrN1BVSjZLZVBUaEJONGJGb0VkZnVUbzNFbFhueFJGSHVHcFVVZ1l2Tk5RTmd0dUVKN1FOc0FWYU5zVVFLVnhyeUhEUzc3a1pqelJnTFV3aUhNX2lkcW43RnFLZ1ZhaDdfTlN1d9IBmgFBVV95cUxOX2xXcWJKdlB6VWJibnc4VmI2YUh3WGRfUWlBaV9UOU5xeFotSVhwOFVJdFRNZFFsZzRtUnQzR0FVcFRiZ2lEMkNFM3J0OEM3bWpyYXo2bkxmdk9kYTNjUGdaNW52dnRUVWZOc0x2YzB3TV8yQUp0cFpuQ2ItYU5ZcnpiX2hEaWxscVMxTnZjY0VjTmk4SlJWRkh3?oc=5"
       },
       {
-        "title": "국장서 당해놓고 또?…‘반도체 3배’ 이어 ‘엔비디아’ 쓸어 담는 서학개미",
-        "source": "매일경제",
-        "date": "11-21 09:24",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBaWlZNNFprYkh5STBkNkNfcDNzV1RuMGNfNmhDWVZnZFFGX21EWnJPeDdEMGJCUzQwWElPZzlROHlHa1FtY0pzc3pZWXpObkpnU3c?oc=5"
+        "title": "반도체 낙수효과에 카드·캐피탈사 웃었다…서민 대출에도 온기 돌까",
+        "source": "중앙일보",
+        "date": "11-22 10:00",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1KMElZdG15RFRTUnU1SmtHWDRzd00xRzVtaVpLTWxXY3ZMWFVwaFg1YTVDQTA2ejBidzRCaUQ3SFF6cjJsQ2tjX0U0WmZpRklCVzY1eWhB?oc=5"
+      },
+      {
+        "title": "인텔·삼성·DNP 한자리에…인천 반도체 워크숍 '유리기판·CPO' 주목",
+        "source": "전자신문",
+        "date": "11-22 09:46",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE0xR3VPWnZ4VUF6RnFDRUs3bWQ0bUM0a0d3LXdPeEM2LTY4b0x4UWw1bFJURVdwXzJVMkU2U1pNbVQ3dkt0LWZsZkRVc1Uzdw?oc=5"
+      },
+      {
+        "title": "’수출 1조 달러’ 한국 세계 4위 전망…반도체 빼면 8위",
+        "source": "연합뉴스TV",
+        "date": "11-22 10:39",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9zYnpJRzFYajAzbmxuQURVYksxTzltbkt4Z2VEMEF4dE5Qd1VyMjhNb0dmM2FqZzBIdkh3dnJQQkhQYXNXV0hGYzNWYUVHWENNVmx3Q0xlZGVRNHcwR3ZmYk9KUFpIdGM?oc=5"
       }
     ],
     "AI": [
       {
-        "title": "인천시, 지역 13개 대학과 ‘글로벌 인공지능(AI) 허브’유치 전략 모색",
-        "source": "인천광역시",
-        "date": "11-20 20:49",
-        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQM3ZWak5WWXh4Q2dsQjBlcC15V1N2RjA1eVpqc25ZZFdsWVRtMVNoMmJTRWZQV0tQbVZqQkhacnNDY1hYUVZYcDUyU0IwWFVIQ2VlRS0wcGxXREtyU1A0d2xCQTNhV1JvSGx5ckxaRzJlYWlmTFF5VmM2Yk5VZHExY2liaw?oc=5"
+        "title": "동대문구시설관리공단, 서울시립대학교 인공지능학과와 MOU 체결",
+        "source": "산경일보",
+        "date": "11-22 10:35",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBfVkdIMFlUZFZfRVRpYlVaZTMySmd3UV9fMkZXbVZiU3ZmTk4xLUk4Sl8zeXRueE9Ia2lwekRxR0hlWko3Rm9VSy1rWWFONThwa0dfeGwzOTdNeGxnemYxZ09TQ1pJcHRPWG5ZSVRFelY?oc=5"
       },
       {
-        "title": "울주군, 경로당 노인 대상 '찾아가는 인공지능' 교육",
-        "source": "연합뉴스",
-        "date": "11-21 08:10",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE43aXhjRDRaeWhWZzY0VlRKWWFiUEh5ck0zUVU5QTB1WDdLZEhQNFI3bWRnN2pmQS05MkJoT1FUZmViYzNuSkRVdzVoNUFoOTRMS01XZTRWRGpPZHhSd1oyT9IBYEFVX3lxTE43aXhjRDRaeWhWZzY0VlRKWWFiUEh5ck0zUVU5QTB1WDdLZEhQNFI3bWRnN2pmQS05MkJoT1FUZmViYzNuSkRVdzVoNUFoOTRMS01XZTRWRGpPZHhSd1oyTw?oc=5"
+        "title": "‘울산 메가’ 직접 챙긴 이 대통령 “지방 중심 AI 투자로 균형 발전”",
+        "source": "한겨레",
+        "date": "11-22 10:07",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4ya1QtTnpBS3lUWkZWZDEzTlA3NHJURjd6VU43a1ZvaWI5QWs1QUItTWZLT1NFUDh5MHNjdlRpQjJ6NEdrM1FNaGtfOWpWcENUcVFiT3NrdUJfWlpNYUVhSThFZFhERmNnQVppYnBnS21FR1Vr?oc=5"
       },
       {
-        "title": "[테크톡노트] 불 꺼진 AI 안경, 나를 찍고 있는 걸까",
-        "source": "매일경제 마켓",
-        "date": "11-21 09:45",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uNFRfbVhhdHZqX1d5cU5IdnVEU1pxc0k5c1ZrUTlnYWNlQVlRTFV4SlAxVXNZQ2dXWDZGWWp4Z0tYOHZvUndROHFOWXBSam5fcVE?oc=5"
+        "title": "'날씨 챗GPT' 만든다...한국형 AI 모델 개발 본격화",
+        "source": "YTN",
+        "date": "11-22 07:46",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1jeHh0NkdMZ211R1gxMXBXWG1GMVJ4NWtTT1V0OU5vMHF3OVFFdUtTVUZ4V1ZNTGJ3S0V0bDFSaXRiMzlGdllybEV3MFRZSmFZZXlkNzRyQ2FBSzgzNXp1bGw1SDhualpNRFY4LXJObw?oc=5"
       },
       {
-        "title": "엔비디아 인공지능(AI) 기술 유출 의혹...美 캘리포니아주 법무부 본격 조사",
-        "source": "공정뉴스",
-        "date": "11-20 23:48",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9IN3duMlI3NWZ0R3BrZEs3emh0b1JPSU8zRUUyX3pZYWpmRXFHSzEyUDlnbGFIYzlmb1M1VXp3eHFVZDRkdmdZLTFtU0Jib25zWnNTQnkzTFJXQktUVi14VUdjMmtRTWky?oc=5"
+        "title": "이 대통령, “대한민국 AI 대전환, 인공지능 고속도로가 열 것”...울산 SK AI데이터센터 건설 현장 점검",
+        "source": "인공지능신문",
+        "date": "11-21 19:48",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5MZ0k4WWg3VUQ3cEJfRDktZktRM1dtR0ZqRlRDUjJ3cXBzVkllTlR1cmFwVWsxQV8xU0VDdDdlaDhjT1A1NkNQQy1ZQ2ZIU1FSSUh0MGgwM2NaLW5laDRLQkc0VEFvVkE?oc=5"
       },
       {
-        "title": "\"지적 놓쳐 미안\"…AI끼리 연구 맡기자 12주 동안 논문 초안 936편 등록",
-        "source": "DongA Science",
-        "date": "11-20 17:45",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE13aExWejEyYUhWMThpN1lld3pWSlc2TThxMVdqT2RHNUpCdWMxZ2c2YjNFQWVLLVIweG1vOXdsSmFIVXB0QzJSTnc3bm1xVlY1RjdUWg?oc=5"
+        "title": "앤스로픽 상장이 던진 2조달러짜리 질문… AI는 투자한 만큼 벌 수 있나",
+        "source": "조선일보",
+        "date": "11-22 09:01",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU0NNZWZXU0RuaXdiWTdoS3JudjZ3UE45bjlDeU1xOHVjRjhKMU5PQndjQlVLNFBndERBUXZsUS1oS1ZKTGtuVm45MWpabXh2VHJ5cDdGN1JWUnNjUHNwYTdKQmI2b19lc05odXd4OW1SbEg2Rk5VQ1ZvUEZIeGdOSGdlcTFpYzdo?oc=5"
       },
       {
-        "title": "167년 난제 푼 AI?…'설명만 25만쪽' 인간은 이해 못 했다",
-        "source": "한국경제",
-        "date": "11-21 11:23",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tWE4ybnZ6RERaclFlZmdUeXYxdV9oZE9RWTBXdWRTWmJqd2c0S3MtQnU3SVJfZVhmNGh1YzhYMl9vZGxGdE5FUWl3WnBQVVc0Wng1NldpTG5Idw?oc=5"
+        "title": "UPA, AI 기반 건설현장 안전관리 확대",
+        "source": "한국해운신문",
+        "date": "11-22 10:07",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9kVWxzaXZ2dnVCeDJJRGl6ajUtMHZHSFdfSnd4M1hnQzFZQlZMWm9yOU84NzRmd1dKaVVhbE1LTEhodW1ZV3dNejdkeHBRWkFJUEtaTklzVWJsRGVLRVd3U2N5TnFBS1Q5aXU5dElyRGVNcEU?oc=5"
       }
     ],
-    "양자컴퓨터": [
-      {
-        "title": "양자컴퓨터 공격도 막을 수 있게…양자내성암호에 주목하는 금융권",
-        "source": "이데일리",
-        "date": "11-21 08:00",
-        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNQmh6aXptenBRS0VaeU1CT3NVZjNSNTZSQkRQRDlkZXMwZHFIQl9qam9QQnI3dkpHU1hIcDJfUG1lTnBYYjlmN2l0Q1Q5MmJMcFlSWjh2WWUyZFZtaUNjVm9LMEtFVWdxUDZrbURnSVVtTnhILUJxWFctaGtkUnB3SQ?oc=5"
-      },
-      {
-        "title": "[BLOCKCHAIN REPORT] “양자컴퓨터가 비트코인 암호를 깬다”…국제증권감독기구, 금융시장에 긴급 경고",
-        "source": "https://www.climatepol.com/",
-        "date": "11-20 23:06",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Db3FGRmFJbl9zLWJyT2hsdVJVUVJ6dnA5RGE5Z3RWYm5QWHpwUXpCVHpxekZJNkxncG1xb0VmNDFTR3pMYWhNLVkzd0hFVXZ4Nzk2VEkyNG1SSzVCcHNhMldqci1EN1g3Zmtldg?oc=5"
-      },
-      {
-        "title": "獨 최초 양자컴퓨터, 성능의 비밀 '이것'에 있었다",
-        "source": "하이테크정보",
-        "date": "11-20 19:56",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5IUk9jc1NoQmdEY0J2Y0VlVUs1ZzV0QWR4eUx0dm1oZzRCRjBqWmpvYVFmam4wdlQ1TzI4MG9Mc1ZFSHF1Vm14YUhhZGJLbktXTXBxbW1TQUtpZVktWXNFdDNtTUdaUklHZm8xWtIBbEFVX3lxTE5IUk9jc1NoQmdEY0J2Y0VlVUs1ZzV0QWR4eUx0dm1oZzRCRjBqWmpvYVFmam4wdlQ1TzI4MG9Mc1ZFSHF1Vm14YUhhZGJLbktXTXBxbW1TQUtpZVktWXNFdDNtTUdaUklHZm8xWg?oc=5"
-      },
-      {
-        "title": "BMO, IBM 양자컴퓨터로 머신러닝 '양자 유용성' 입증…데이터 표본 최대 100배 감소",
-        "source": "양자신문",
-        "date": "11-20 08:00",
-        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBnb3JaQVZLMlBmNkxFWW5xX21YeWpjeF9XQURvRFY1QjlrSTBfUWc2NEszNTVDUnZmVWNEYUdZWGdXLTVmaTJDNmRNTXhrc0JSaTljeElxM3pCUUlrVUVZX2pobE12RHdZZ3FWY1FmSQ?oc=5"
-      },
-      {
-        "title": "144큐비트 양자 프로세서부터 51큐비트 검증 기술까지 — 반도체·소재 연구를 바꿀 2026년 양자 컴퓨팅 성과",
-        "source": "한국공공정책신문",
-        "date": "11-20 22:00",
-        "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1zY0Fkc3JEaXpLT0JCbDBza3JVVmVKdlJjbVhhRmp1eUlONmJueVFsNGxyWW1TS2tjR1l5VlRZUVhITU0?oc=5"
-      },
-      {
-        "title": "양자·고전 컴퓨터 결합이 반도체 소재 연구 비용 구조를 바꾼다",
-        "source": "얼리어답터뉴스",
-        "date": "11-20 21:56",
-        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1mQUZzczY3NFRCSWlfWjdPSng0dVlrVkNScjhDbXNQQmV6emR1cGc0d25aOVg3QjlXdmhvMzhNRDJwR2ZqalRKdU93?oc=5"
-      }
-    ],
+    "양자컴퓨터": [],
     "청약": [
       {
-        "title": "[주간분양] 이주 '중화역 라온프라이빗 센트로' 순위 내 청약 마감",
+        "title": "“더 작은집 없나요?”…분양가 치솟자 서울 청약신청 80% ‘소형평수’",
+        "source": "매일경제",
+        "date": "11-22 08:04",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1KLXEyTmVJeUdFWkFyaW9rX0RQZGRSYXV1a1hKbFJ4TGtnMmJILTJoVmUwS2dDQXh1NXJqdFhfbHU4TkdVVndqUzNfbDJZMkxteXN2RHEtM18?oc=5"
+      },
+      {
+        "title": "[이번주 분양] 전국 15곳 6295가구 청약… 전주 대비 물량 3배 이상 확대",
+        "source": "오피니언뉴스",
+        "date": "11-22 09:00",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE11SGtzemZ5dl9vTnNpNEFhODhic2I1V2YyeU41MjBTZ01RcW8wTWxsY08wclVLS3Znd3hQUXA4c0NOWHJtbl9NZUl6dXMwZWhDR3Z5dUpsOUotS3g3eHBPdHBPeWNWcVJmNlNNX3h2UU8tdw?oc=5"
+      },
+      {
+        "title": "[이번 주 분양 일정] 전국 15곳 6295호 청약… 전주 대비 물량 3배 이상 확대",
+        "source": "대한경제",
+        "date": "11-22 09:46",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9helo0UUhvQ1V6d3FyeER1Q1BxQXJCUno1X2dMSTE5VVZoVXgxWjhRdFh4R21TNkNzclh1Ukp3bWprX0xxdEJvd3J6TkU0ajUwWHVoYWZMR0VNVEV6UGZHRV9QM2FUaUJCY1I2RDBaanMyQ1c3?oc=5"
+      },
+      {
+        "title": "[분양 캘린더] 11월 넷째 주 6295가구 청약 접수",
+        "source": "아시아타임즈",
+        "date": "11-22 10:02",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5FX1I2aFBXODJZajlxNmhScW5WYkUwT1NZOHF5OEFKaHpFSUtrWk1lUXFXRWotalpCZFpPcVAwSXpPS3FITzFUWXRIOWpiZXhZVF9lSGdvM3hSSk5ELWc?oc=5"
+      },
+      {
+        "title": "[주간분양] 이주 '구미 파크원 데시앙' 등 14개 단지 청약",
         "source": "신아일보",
-        "date": "11-21 08:38",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBvOS02YWRBb0gyTGxHWWY5dXZzQjhZcTVaTnoxSERmRXBlZkF5bUVmbVhCVGZDSEtTbHJ3dnI0Rzh6elc0akxHcUJfWGZFMjJsQnRDU0tXUGl6THRtNlR0WmlBcHVSdU5Lem9FREdLX1E?oc=5"
+        "date": "11-22 08:55",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBwZFBBbTUwODRuc1NqU1A1T3dJdW1kbHVvVTNmYkFOOUdlaEczVFF1V1NUX19hXzRyWmtNbHhqYk1wMzhEeVdTTmR4cW96d2V4NjE2YUlwbEtFWnQwaVpzZC04OWw2RmNiVjc1bXJaTWw?oc=5"
       },
       {
-        "title": "[분양 캘린더] '해링턴 플레이스 문래' 등 15곳서 6295가구 청약",
-        "source": "서울경제TV",
-        "date": "11-21 08:00",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5HMVVoYk1ET21fR2J4OHpzSUtuREh6Q1RRanVuZFkxb3M1UFBDNnV6Qy1JQWYyc052UU4yMWd2d2RmdWdGYXZpaEFQc3RrLUV3S2ZCeTVlaV9MOG9TVGZCR3hLcnQ?oc=5"
-      },
-      {
-        "title": "[송윤주의 부동산생태계] 광교서 흥한 지분적립형 주택…정부 확대 기조 속 대출·세제 뒷받침이 관건",
-        "source": "에너지경제신문",
-        "date": "11-21 09:00",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBiYzVnbkY3bU9xNUhWTFgzWXVPc3V0VzlFRHhHcUpBOE03VFdXV2ZqM2JWSTZsLWpkQmpPa3hGLXdhOTlqRnVUb1RkOU5tX3pQMXZRZFByTDVuZlU?oc=5"
-      },
-      {
-        "title": "11월 넷째주, 전국 6295가구 청약…전주 比 분양물량 3.7배↑",
+        "title": "[이번주 IPO]11월 넷째 주 수요예측·청약 일정",
         "source": "아시아경제",
-        "date": "11-21 07:00",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5BVHNZcGJ5b3ZmRGxna29xZGVjc2o1RGdMemNJYl9ycWtxbW1uSWZoLS0wUWFuMGNaNURKemF3d2s5RE1zUTNUeF9mZGtPdUtfSU9ibE4tY3duN2I3SFIxUw?oc=5"
-      },
-      {
-        "title": "잠실 ‘로또 청약’ 뜬다… ‘래미안 아이파크’ 계약 취소 3가구 23~24일 청약",
-        "source": "www.dt.co.kr",
-        "date": "11-21 11:07",
-        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBib1BBbUxrUjlNUU5oc0dfa0JSOWlzRFN0M0swRkh4cERiM182S0Y2bUpjRlpIc0hydFJnV0doaEY0VGJxUnhtWE5RVGhuZw?oc=5"
-      },
-      {
-        "title": "청약 물량 3.7배 늘어난다…다음 주 전국 6천가구 분양시장 출격",
-        "source": "SBS Biz",
-        "date": "11-21 09:14",
-        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9HdTFiakRhNWlGX25FanVaREljSmhqT3V0bkt2bi1ZOWgxOGMwUXdmRVo2TGZZNmFua0NLSDZOZGdrWElmNlcyTm1faG9mRlJNck1n0gFYQVVfeXFMTTdnMTVTUXJmXzJjM1lyb3ZzaDVoRTVmUEl0eHJVMEo5RUFFSFM0bERnN0w0ZmJhOVVqYkFFNXVLSlhKb3ZxdEhXSjRlelh0ckdQVFlqandxYQ?oc=5"
+        "date": "11-22 08:00",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9YTC1FN0RaYVVjZ3g5RktZOVRmUDE0c3hVOEdzSTJiUkRJUkcwSG9KMy01cUt2NkkxMXJvd3Vwdjk5cEtBQ2dCaEJkQkN4Y2FzQTYxV1RWT3N5X2I3OFFRYzhB?oc=5"
       }
     ],
     "삼성전자": [
       {
-        "title": "삼성전자가 디자인을 사랑의 표현이라 부르는 이유",
-        "source": "보그 코리아 (Vogue Korea)",
-        "date": "11-21 10:00",
-        "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPVFVXdkwzeEFNVTR1ZndXY2c1VWVkMFc2clJYNWhUdUtoYW5KT2RUcVNXSUJEZkZmdmNZbDhSNk9ub3dPVWczTXpSc1dITWNxMU92aWlOcFVlejJrTUczMjhhSms4S3psSm5qNHJvS0kxbk5WbmhpS25fbmNfa2RJSk5VNUI0WFNWck5MZlV4dVljSkdDdlZrWHg5cXRwSGFLZW96elBFT2dxQ0UxZWcyOUVwLWhaWl9CM096STZDOUpWTnVhRkF3Z3RvRTdiOV9QSEFrNjVJcW8xSGdCdlpWWHhNWXM1bzJRRTRPVU9MZTU2ejZiUk9NRmR5NE8xU1B5amUxSVNQR1lTRm9IV20zaWM0bHpFRUtZdDJ3TktoZEtWQ25mdGhBS1VfejZTVlF2X1VwLWszZlBwdjNQd1M2TC1WU1VYbXgxZkp0bzBtYw?oc=5"
+        "title": "\"삼성전자 700조 저평가, 손절 말고 버티세요\"…재무제표 뜯어보니[부꾸미] - 머니투데이",
+        "source": "머니투데이",
+        "date": "11-22 10:33",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9pRkMzckl3eFF6Q3dvZEpsMUF3SnBMY0VuM08wR25IdFlIUVJJNV9jOUFSckVGbUdWck52QmZ2cER6SWZZblozbkhhNkNFc1ExTDFxOVlJYzY5ZEQ0X2Rpcmltenhta2t00gFuQVVfeXFMUFpSSDdnYlpoZWNObVJTdkVCYUVsSS1NXy1GZDUzUl9iV1BmRTJqOUFuejBWUkw0a01yeEo0SlYzT0pWaWVlcThWRWF4dVlRNlFrUHdUUkZjeVlaeFpxVDNUanpHTDdmbHZWMzJwUkE?oc=5"
       },
       {
-        "title": "“삼성전자-TSMC, 중국에 일부 반도체 출하 중단 통보”",
-        "source": "동아일보",
-        "date": "11-20 18:19",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0xd2NsaGk3U3IwLVpONEtSSnp2UE9NcVU0d0E3cGRmaE04bEUtU19ibmxnQVowTVhHUEhlYjVlM3JNSE9rSW9nSEU0d1R1NWxXb0h4Qkp5cTYxQW5oaGxDZ1NPRk5faWZJZjBCUzVkcXJvQ1dwenfSAWZBVV95cUxQNWFFN3NuVEZla0k3N1hGbVFIRnNiWVRMRlhBdDVMSzgzMklSM0Y2SHktSVB2OHgwRXlwZ09DWVpTNGNtcUY0cVJHcXg1b3FPT2JtU25iUEp0Z205VnNPOWRLZVphYkE?oc=5"
+        "title": "삼전닉스, 3분기 배당성향 껑충…상반기 대비 21배로 늘기도",
+        "source": "연합뉴스",
+        "date": "11-22 06:03",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5TZWt3aXlpa2FoS2JlVDFZaWxteEtDV0U3cmd0X2pueGY2YzhHS1hMblFmeGFJLXBIQ1R1WHZnb0pIcnloc240RmdCalc0MlhjNDZ3YjhPMWlmQW_SAWBBVV95cUxPNUpyMU5ZbnFZdEdiVWZaczFzR0dLaWRvQXFlWThWbVdhR3Bxa01GR1pPaG1lbjRvcXlDZ3ZDSjFGQU9TQWRSdjBaMzMtcmFoMl82SDE4bHNTbldHbGc2MVc?oc=5"
       },
       {
-        "title": "삼성전자, 메타 독주 'AI 안경' 시장에 도전…다음 달 첫 제품 출시",
-        "source": "아이뉴스24",
-        "date": "11-21 09:00",
-        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1ZQTlndXJvX3JfNkJNX2RFb2JUeFQwSWJHaG5BR2g1aTA5YU1WQmdWUWZoN1J3WC1yWURQbjFuTk1UN1l1OU54LUVjcw?oc=5"
+        "title": "애플이 그린 20주년 미래? 삼성전자는 이미 '과거형'…주도권 굳혔다",
+        "source": "파이낸셜포스트",
+        "date": "11-22 07:00",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5jZkJiUFVOanVrV1hLcTFRREgtUks2MHVsQVM0T0RicXNTUjJyUzhlRDJQY1lMZE1nU2JJQkJBeFRFWmpha3YzNGctRXB1MGxKMUZhOS16cnhfbHpsdmI4bF9rRXZzNDkxVE8tT29kNFhaaTln?oc=5"
       },
       {
-        "title": "삼성전자, 전영현·노태문 투톱 유지...메모리·스마트폰 겸직 해소",
-        "source": "조선일보",
-        "date": "11-20 20:02",
-        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMVpoSG9tRHYwbFRLTUVNOGZIVFNfZl9lQ2JkeVBkeHFzOEo3am9tU3RVMTRZdTAybkEwYUJHUnZtQWZZYnhjOXpNMi1HSXFyamFNTWpHakVuNjhLQmhBTVNaX1o5c001VkVqcmdoN0QtcW1iSkxQX0dTQTVmQm1mTEJhaw?oc=5"
+        "title": "코스피 ‘곡소리’ 날 때 혼자 ‘잇몸미소’…삼성전자 등에 업은 로봇株, 계속 뛸까?",
+        "source": "매일경제 마켓",
+        "date": "11-22 10:18",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE84ODVhQ25pME9JNFdaX3ltVnJWSk1lbFhYUDFwd3VER1Y2dnRTbEltUnMwVVVuMDlFdHdUY2tNMXVBUExVdFB6M01BcUU2YU5OdGc?oc=5"
       },
       {
-        "title": "나스닥 주간 10% 폭락·SOXL 32% 추락…삼성전자·SK하이닉스 '월요일 공포'",
-        "source": "녹색경제신문",
-        "date": "11-21 10:44",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRSmtoZnB3aVh0dGJta1pQRUtfaUZHb2hzRFVILXVhSzRwa1VheHh5VjJIS253bXJsWTRPQkdaWGlVaWcwUVZQSWlXbUZfV1gwaUwwLWxnYTNwcGhzdG5uZC1UdjBjOW1k?oc=5"
+        "title": "반도체 호황에 배당도 폭증…SK하이닉스 21배·삼성전자 4.4배",
+        "source": "에너지경제신문",
+        "date": "11-22 09:59",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5pR1ZTdlR5RDFxSjdyUGdsd3hqV2p4ZWxOZE1kbDJWenBGMHJBc1VaemIwdW1MRjRJRjkyOVpKYlFfdTdocDFCUGwyRmoxZDJFeVdwSE5lRzBJLVBVRUFFSFA3QQ?oc=5"
       },
       {
-        "title": "삼성전자·SK하이닉스, 안전·환경경영 강화…대규모 증설 속 고도화 집중",
-        "source": "블로터",
-        "date": "11-21 09:00",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRam5naWdDbDJuMXMxaThrLU9ZRFlxd3E5THRiMjN0djJReW11MzRSUjdWWEgteTdidGZkVjd1QjljZVJQUWlWcEhYSnVCNnIwMTNDSnJTYTFiQjJJRjZoQlBETEoyakdV0gFsQVVfeXFMUGVMSGEydl9mUEpoNkpLeF9OWlZCUndwa0hzZ2hUbTFGTGhhS1ZyalBVei1LdXhfXzRHYlBrZHRiQjV0ekRoWE5IRnVLQzVlbklJRW04ZGRsOVY5SFQ5WWZlclRxUlVaRUpNWU1Q?oc=5"
+        "title": "“호황 끝” 공포에 주가 반토막…삼전닉스 3대 불안의 진실",
+        "source": "중앙일보",
+        "date": "11-22 09:32",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBRZ3VnSnBrM3ZrN3RRS2xVR3hUTzcySmJYZDdEVHdlTklkaF9WejRGZ0VFMDYyLUk3ZS1ZR20ySnRKbXdoVXdyYW9fLUpFeF9xVFh1ZlRB?oc=5"
       }
     ]
   }
